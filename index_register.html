@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">  
+
+<head>  
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>用户注册</title>  
+	<script type="text/javascript" src='js/jquery-1.4.4.min.js'></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head> 
+
+<body> 
+<div class='body_main'>
+    <div class='box_title'>
+      <div class='text_content'>
+        <h1>用户注册</h1>
+      </div>
+    </div>
+    <div class='box_main'>
+      <div id="register" class="register">
+        <form id="form" action="./reg.php" method="post" onSubmit="return true;">
+          <div id="form_submit" class="form_submit">
+            <div class="fieldset">
+              <div class="field-group">
+                <label class="required title">姓名</label>
+                <span class="control-group" id="name_input">
+                  <div class="input_add_long_background">
+                    <input class="register_input" type="text" id="name" name="name" value="" onblur="__changeFieldValue('name');">
+                  </div>
+                </span>
+              </div>
+
+               <div class="field-group">
+                <label class="required title">单位</label>
+                <span class="control-group" id="danwei_input">
+                  <div class="input_add_long_background">
+                    <input class="register_input" type="text" id="danwei" name="danwei" value="" onblur="__changeFieldValue('danwei');">
+                  </div>
+                </span>
+              </div>       
+
+          <div id="div_submit" class="div_submit">
+            <div class='div_submit_button'>
+              <input id="submit" type="submit" value="点击注册" class='button_button disabled'>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+    <div class='box_bottom'></div>
+  </div>
+
+
+  <script type="text/javascript">
+
+  function __changeFieldValue(of) {
+    var value = $('#' + of).val();
+
+    if (of == 'email') {
+      if (value.search(/^[\w\.+-]+@[\w\.+-]+$/) == -1) {
+        showTooltips('email_input', '请输入正确的Email地址');
+        return;
+      }
+    } else if (of == 'mobile') {
+      if (value == '' || !isMobilePhone(value)) {
+        showTooltips('mobile_input', '请输入正确的手机号码');
+        return;
+      }
+    } else if (of == 'name') {
+      if (value == '') {
+        showTooltips('name_input', '请输入姓名');
+        return;
+      }
+    } else if (of == 'danwei') {
+      if (value == '') {
+        showTooltips('danwei_input', '请输入单位');
+        return;
+      }
+    } else if (of == 'erjidanwei') {
+      if (value == '') {
+        showTooltips('erjidanwei_input', '请输入二级单位');
+        return;
+      }
+    } else if (of == 'zhicheng') {
+      if (value == '') {
+        showTooltips('zhicheng_input', '请输入职称');
+        return;
+      }
+    } else if (of == 'jianli') {
+      if (value == '') {
+        showTooltips('jianli_input', '请输入个人简历');
+        return;
+      }
+    } else if (of == 'keyan') {
+      if (value == '') {
+        showTooltips('keyan_input', '请输入科研经历、成果');
+        return;
+      }
+    } else if (of == 'tuijian1name') {
+      if (value == '') {
+        showTooltips('tuijian1name_input', '请输入推荐人1姓名');
+        return;
+      }
+    } else if (of == 'tuijian2name') {
+      if (value == '') {
+        showTooltips('tuijian2name_input', '请输入推荐人2姓名');
+        return;
+      }
+    } else if (of == 'tuijian1email') {
+      if (value.search(/^[\w\.+-]+@[\w\.+-]+$/) == -1) {
+        showTooltips('tuijian1email_input', '请输入正确的推荐人1 Email地址');
+        return;
+      }
+    } else if (of == 'tuijian2email') {
+      if (value.search(/^[\w\.+-]+@[\w\.+-]+$/) == -1) {
+        showTooltips('tuijian2email_input', '请输入正确的推荐人2 Email地址');
+        return;
+      }
+    }
+  }
+  </script>
+
+
+
+
+
+
+</body> 
+</html> 
