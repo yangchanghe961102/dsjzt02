@@ -29,10 +29,30 @@ function load_user_info() {
 
     info_text.append("text")
         .text("当前想去城市： ")
-        .attr("id", "city")
+        .attr("id", "city_text")
         .attr("x", 0)
         .attr("y", text_height * 0.5)
         .attr("font-size", text_height * 0.07);
+
+    var info_edit = info_text.append("g")
+        .attr("id", "info_edit")
+        .attr("transform", function(d){
+            x = document.getElementById("city_text").getBBox().width + text_width * 0.05;
+            return "translate(" + x + "," + text_height * 0.43 + ")"
+        })
+        .attr("height", text_height * 0.07);
+
+    info_edit.append("image")
+        .attr("xlink:href", "image/edit_icon.jpg")
+        .attr("width", text_height * 0.07)
+        .attr("height", text_height * 0.07);
+
+    info_edit.append("text")
+        .text("编辑")
+        .attr("x", text_height * 0.1)
+        .attr("y", text_height * 0.07)
+        .attr("font-size", text_height * 0.07)
+        .attr("text-decoration", "none");
 
     for (i = 0; i < 6; ++i) {
         info_text.append("text")
@@ -46,7 +66,6 @@ function load_user_info() {
             .attr("font-size", text_height * 0.07);
     }
 
-
     head_width = width * 0.3;
     head_height = height * 0.5;
     head_size = Math.min(head_width, head_height);
@@ -57,4 +76,16 @@ function load_user_info() {
         .attr("height", head_size * 0.9)
         .attr("x", text_width + (head_width - head_size) / 2)
         .attr("y", (head_height - head_size) / 2);
+
+    info_edit.on("mouseover", function(d){
+        d3.select(this).selectAll("text")
+            .style("color", "#7B68EE")
+            .attr("text-decoration", "underline");
+    })
+
+    info_edit.on("mouseout", function(d){
+        d3.select(this).selectAll("text")
+            .style("color", "#000000")
+            .attr("text-decoration", "none");
+    })
 }
