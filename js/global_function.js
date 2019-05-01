@@ -1,2 +1,2 @@
-var USERNAME = "test";
-var USERHEAD = "image/test.jpg"
+var USERNAME = "user";
+var USERHEAD = "image/user.jpg"
