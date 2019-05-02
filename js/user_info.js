@@ -1,4 +1,4 @@
-function load_user_info() {
+function init_user_info() {
     var margin = {top: 5, right: 5, bottom: 5, left: 5};
     var width = document.getElementById("user_info").clientWidth - margin.left - margin.right;
     var height = document.getElementById("user_info").clientHeight - margin.top - margin.bottom;
@@ -23,6 +23,7 @@ function load_user_info() {
 
     info_text.append("text")
         .text("您已去过  " + CITY_NUM + "  个城市")
+        .attr("id", "city_num")
         .attr("x", 0)
         .attr("y", text_height * 0.3)
         .attr("font-size", text_height * 0.07);
@@ -66,8 +67,8 @@ function load_user_info() {
             .attr("font-size", text_height * 0.07);
     }
 
-    head_width = width * 0.3;
-    head_height = height * 0.5;
+    head_width = width * 0.4;
+    head_height = height * 0.45;
     head_size = Math.min(head_width, head_height);
     var head_image = svg.append("g").append("image")
         .attr("xlink:href", USERHEAD)
@@ -75,17 +76,17 @@ function load_user_info() {
         .attr("width", head_size * 0.9)
         .attr("height", head_size * 0.9)
         .attr("x", text_width + (head_width - head_size) / 2)
-        .attr("y", (head_height - head_size) / 2);
+        .attr("y", head_height * 0.17 + (head_height - head_size) / 2);
 
     info_edit.on("mouseover", function(d){
+        this.style.cursor = "pointer";
         d3.select(this).selectAll("text")
-            .style("color", "#7B68EE")
             .attr("text-decoration", "underline");
     })
 
     info_edit.on("mouseout", function(d){
+        this.style.cursor = "default";
         d3.select(this).selectAll("text")
-            .style("color", "#000000")
             .attr("text-decoration", "none");
     })
 }
