@@ -54,5 +54,50 @@ function init_reco_list() {
             .attr("text-decoration", "none");
     })
 
-    
+    reco_g = svg.append("g")
+        .attr("class", "reco_g")
+        .attr("transform", "translate(" + width * 0.03 + "," + height * 0.1 + ")");
+
+    reco_item_w = width * 0.47;
+    reco_item_h = height * 0.4;
+
+    var reco_items = reco_g.selectAll(".reco_item")
+        .data(reco_list)
+        .enter()
+        .append("g")
+        .attr("class", "reco_item")
+        .attr("name", function(d) {
+            return d.name;
+        })
+        .attr("fpath", function(d) {
+            return d.fpath;
+        })
+        .attr("transform", function(d, i) {
+            x_index = i % 2;
+            y_index = parseInt(i / 2);
+            console.log(x_index);
+            console.log(y_index);
+            x = x_index * reco_item_w;
+            y = y_index * reco_item_h;
+            return "translate(" + x + "," + y + ")";
+        })
+
+
+    reco_items.append("image")
+        .attr("xlink:herf", function(d) {
+            return d.fpath;
+        })
+        .attr("width",  reco_item_w * 0.9)
+        .attr("height", reco_item_h * 0.9)
+        .attr("x", reco_item_w * 0.05)
+        .attr("y", reco_item_h * 0.05);
+
+    reco_items.append("text")
+        .text(function(d) {
+            return d.name;
+        })
+        .attr("x", 0)
+        .attr("y", reco_item_h * 0.9)
+        .attr("font-size", font_size);
+
 }
