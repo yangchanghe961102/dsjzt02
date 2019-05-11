@@ -82,22 +82,40 @@ function init_reco_list() {
             return "translate(" + x + "," + y + ")";
         })
 
+    image_w = reco_item_w * 0.9;
+    image_h = reco_item_h * 0.8;
+    if (image_w / image_h > 3 / 2) {
+        image_w = image_h * 3 / 2;
+    }
+    else {
+        image_h = image_w * 2 / 3;
+    }
 
     reco_items.append("image")
-        .attr("xlink:herf", function(d) {
+        .attr("xlink:href", function(d) {
             return d.fpath;
         })
-        .attr("width",  reco_item_w * 0.9)
-        .attr("height", reco_item_h * 0.9)
-        .attr("x", reco_item_w * 0.05)
-        .attr("y", reco_item_h * 0.05);
+        .attr("width",  image_w)
+        .attr("height", image_h)
+        .attr("x", (reco_item_w - image_w) / 2)
+        .attr("y", (reco_item_h * 0.9 - image_h) / 2);
 
     reco_items.append("text")
         .text(function(d) {
             return d.name;
         })
-        .attr("x", 0)
-        .attr("y", reco_item_h * 0.9)
-        .attr("font-size", font_size);
+        .attr("class", "reco_item_text")
+        .attr("id", function(d, i) {
+            return "reco_item_text_" + i;
+        })
+        .attr("font-size", reco_item_h * 0.1)
+        .attr("x", function(d, i) {
+            console.log(document.getElementById("reco_item_text_" + i).getBBox().width);
+            console.log(image_w)
+            return (reco_item_w - image_w) / 2 + (image_w - document.getElementById("reco_item_text_" + i).getBBox().width) / 2;
+        })
+        .attr("y", reco_item_h * 0.95);
+        
+
 
 }
