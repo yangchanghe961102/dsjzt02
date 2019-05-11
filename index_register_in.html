@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">  
 
 <head>  
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>用户注册页面</title>  
 	<script type="text/javascript" src='js/jquery-1.4.4.min.js'></script>
@@ -45,7 +46,7 @@
 
     <div class='box_main' style="background:#87CEFA; position: absolute; top: 45%; left: 30%; width: 40%; height: 30%;">
       <div id="register" class="register">
-        <form id="form" action="index.html" method="post" onSubmit="return true;">
+        <form id="form" action="index.html" method="post" onSubmit="return Is_empty();">
           <div id="form_submit" class="form_submit">
             <div class="fieldset" style=" position:relative; left: 40%;">
               <div class="field-group">
@@ -68,7 +69,7 @@
 
               <div id="div_submit" class="div_submit">
                 <div class='div_submit_button'>
-                  <input id="submit" type="submit" value="Log In" class='button_button disabled' style="font-size:20px; text-align:center; position:relative; width:30%; height:50px; left:-5%; top:60px; cursor:pointer">
+                  <input id="submit" type="submit" value="登录" class='button_button disabled' style="font-size:20px; text-align:center; position:relative; width:30%; height:50px; left:-5%; top:60px; cursor:pointer">
                 </div>
               </div>
         </form>
@@ -91,8 +92,22 @@
     window.location.href="index_register_in.html";
   }
 
+  function Is_empty(){
+    if ($('#name').val() == '') {
+      alert("您尚未填写用户名！")
+      return false;
+    }
+    if ($('#mima').val() == '') {
+      alert("您尚未填写密码!")
+      return false;
+    }
+    return true;
+
+  }
+
 
   function __changeFieldValue(of) {
+  	return ;
     var value = $('#' + of).val();
 
     if (of == 'name') {
