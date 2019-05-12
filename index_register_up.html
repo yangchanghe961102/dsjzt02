@@ -1033,26 +1033,41 @@ background:#FFFFFF; cursor:pointer;" onclick= "highlight_portraits(this)">
       var scenery3 = $('input[id=scenery3]').val();
       var portrait = Current_selection;
       var url = 'localhost:8080/recommend/register?password=' + mima + '&touxiangId=' + portrait +'&spotName=' + scenery1 + '&userName=' + name;
+      alert(url)
       //window.location.href = url;
 
-      var xmlhttp;
-      if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp=new XMLHttpRequest();
-      }
-      else{// code for IE6, IE5
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-      }
-      xmlhttp.onreadystatechange=function()
-      {
-        if (xmlhttp.readyState==4 && xmlhttp.status==200)
-        {
-          document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
-        }
-      }
-    xmlhttp.open("GET",url,true);
-    xmlhttp.send();
+      var getJSON = function(url) {
+      return new Promise(function(resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', url, true);
+        xhr.responseType = 'json';
+        xhr.onload = function() {
+          var status = xhr.status;
+          if (status == 200) {
+            resolve(xhr.response);
+          } else {
+            reject(status);
+          }
+        };
+        xhr.send();
+      });
+    };
 
-
+    getJSON(url).then(function(data) {
+        alert('Your Json result is:  ' + data); //you can comment this, i used it to debug
+        
+        
+        // var html = '<ul>';
+        // for (var i = 0; i < data.length; i++) {
+        //     html += '<li>' + 'jobID is:'+data[i].jobID + ', file path is' +data[i].filePath + '</li>';
+        // }
+        // html += '</ul>';
+        
+        
+        // document.getElementById('result').innerHTML = html; //display the result in an HTML element
+    }, function(status) { //error detection....
+      alert('Something went wrong.');
+    });
 
   }
 
