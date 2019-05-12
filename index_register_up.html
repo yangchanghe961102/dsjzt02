@@ -22,26 +22,45 @@
 <!------------------------------------------------------------------------------------------------------------------------------>
     <div class="portraits" id="portraits" style=" position: absolute; top: 45%; left: 30%; width: 40%; height: 54%;
 background:#87CEFA; visibility:hidden; z-index: 999" >
-      <div class="portraits_items" id="miaomiaomiao" style=" position: absolute; top: 1%; left: 2%; width: 22.5%; height: 30%;
+      <div class="portraits_items" style=" position: absolute; top: 5%; left: 2%; width: 22.5%; height: 35%;
 background:#FFFFFF; cursor:pointer;" onclick= "highlight_portraits(this)">
-        <img src="image/故宫.jpg" id="portrait_1" style="width: 100%; height: 100%;" />
+        <img src="image/image_1.jpg" id="portrait_1" style="width: 100%; height: 100%;" />
       </div>
 
-      <div class="portraits_items" style=" position: absolute; top: 1%; left: 26.5%; width: 22.5%; height: 30%;
+      <div class="portraits_items" style=" position: absolute; top: 5%; left: 26.5%; width: 22.5%; height: 35%;
 background:#FFFFFF; cursor:pointer;" onclick= "highlight_portraits(this)">
-        <img src="image/八达岭长城.jpg" id="portrait_2" style="width: 100%; height: 100%;" />
+        <img src="image/image_2.jpg" id="portrait_2" style="width: 100%; height: 100%;" />
       </div>
 
-      <div class="portraits_items" style=" position: absolute; top: 1%; left: 51%; width: 22.5%; height: 30%;
+      <div class="portraits_items" style=" position: absolute; top: 5%; left: 51%; width: 22.5%; height: 35%;
 background:#FFFFFF; cursor:pointer;" onclick= "highlight_portraits(this)">
-        <img src="image/南锣鼓巷.jpg" id="portrait_3" style="width: 100%; height: 100%;" />
+        <img src="image/image_3.jpg" id="portrait_3" style="width: 100%; height: 100%;" />
       </div>
 
-      <div class="portraits_items" style=" position: absolute; top: 1%; left: 75.5%; width: 22.5%; height: 30%;
+      <div class="portraits_items" style=" position: absolute; top: 5%; left: 75.5%; width: 22.5%; height: 35%;
 background:#FFFFFF; cursor:pointer;" onclick= "highlight_portraits(this)">
-        <img src="image/颐和园.jpg" id="portrait_4" style="width: 100%; height: 100%;" />
+        <img src="image/image_4.jpg" id="portrait_4" style="width: 100%; height: 100%;" />
       </div>
-      <!-- border-width:5px; border-color:#FF0000; border-style:solid -->
+      
+      <div class="portraits_items" style=" position: absolute; top: 50%; left: 2%; width: 22.5%; height: 35%;
+background:#FFFFFF; cursor:pointer;" onclick= "highlight_portraits(this)">
+        <img src="image/image_5.jpg" id="portrait_5" style="width: 100%; height: 100%;" />
+      </div>
+
+      <div class="portraits_items" style=" position: absolute; top: 50%; left: 26.5%; width: 22.5%; height: 35%;
+background:#FFFFFF; cursor:pointer;" onclick= "highlight_portraits(this)">
+        <img src="image/image_6.jpg" id="portrait_6" style="width: 100%; height: 100%;" />
+      </div>
+
+      <div class="portraits_items" style=" position: absolute; top: 50%; left: 51%; width: 22.5%; height: 35%;
+background:#FFFFFF; cursor:pointer;" onclick= "highlight_portraits(this)">
+        <img src="image/image_7.jpg" id="portrait_7" style="width: 100%; height: 100%;" />
+      </div>
+
+      <div class="portraits_items" style=" position: absolute; top: 50%; left: 75.5%; width: 22.5%; height: 35%;
+background:#FFFFFF; cursor:pointer;" onclick= "highlight_portraits(this)">
+        <img src="image/image_8.jpg" id="portrait_8" style="width: 100%; height: 100%;" />
+      </div>
 
 
       <div class="portraits_confirm" style="font-size:50%; text-align:center; position: absolute; top: 89%; left: 20%; width: 20%; height: 10%; background:#FFFFFF; cursor:pointer;" onclick = "confirm_portrait()">
@@ -88,7 +107,7 @@ background:#FFFFFF; cursor:pointer;" onclick= "highlight_portraits(this)">
 
     <div class='box_main' style="background:#87CEFA; position: absolute; top: 45%; left: 30%; width: 40%; height: 54%;">
       <div id="register" class="register">
-        <form id="form" action="./reg.php" method="post" onSubmit="return Is_empty();">
+        <form id="form" action="" method="post" onSubmit="return false">
           <div id="form_submit" class="form_submit">
             <div class="fieldset" style=" position:relative; left: 40%;">
               <div class="field-group">
@@ -111,11 +130,858 @@ background:#FFFFFF; cursor:pointer;" onclick= "highlight_portraits(this)">
 
               <div class="field-group">
                  <datalist id="scenery">
-                    <option value="长城">
-                    <option value="颐和园">
-                    <option value="十三陵">
-                    <option value="故宫">
-                    <option value="圆明园">
+                    <option value="龟兹古城遗址">
+                    <option value="龙门峰">
+                    <option value="龙门">
+                    <option value="龙角山">
+                    <option value="龙眼山">
+                    <option value="龙王峡生态旅游">
+                    <option value="龙潭瀑布">
+                    <option value="龙潭河景区">
+                    <option value="龙潭河">
+                    <option value="龙湾遗址展示园">
+                    <option value="龙湫虎穴">
+                    <option value="龙湖古城遗址">
+                    <option value="龙港革命旧址群">
+                    <option value="龙女沟景区">
+                    <option value="龙凤岛">
+                    <option value="龙凤古镇">
+                    <option value="齐白石故居">
+                    <option value="鼓城山七里峡景区">
+                    <option value="黔西南州体育公园">
+                    <option value="黔南掌布风景区">
+                    <option value="黑风口">
+                    <option value="黎明通天河景区">
+                    <option value="黄连河风景区">
+                    <option value="黄花湖温泉度假区">
+                    <option value="黄牛石">
+                    <option value="黄河第一湾">
+                    <option value="黄河源旅游区">
+                    <option value="黄河源头第一桥">
+                    <option value="黄河坛">
+                    <option value="黄河三峡风景名胜区">
+                    <option value="黄桑国家级自然保护区">
+                    <option value="黄岩岛">
+                    <option value="黄大仙公园">
+                    <option value="麻阳河自然保护区">
+                    <option value="麦积山植物园">
+                    <option value="麦城">
+                    <option value="麒麟洞景区">
+                    <option value="鹿鸣峰">
+                    <option value="鹿角湾牧场">
+                    <option value="鹿寨香桥岩溶国家地质公园">
+                    <option value="鹭鸟天堂">
+                    <option value="鹦歌岭">
+                    <option value="鸵鸟山庄">
+                    <option value="鸭绿江大峡谷">
+                    <option value="鸣凤山风景区">
+                    <option value="鲤鱼坝">
+                    <option value="鲁布格深谷湖">
+                    <option value="鲁克沁镇">
+                    <option value="鱼湖">
+                    <option value="鱼泉山风景区">
+                    <option value="鱼梁洲">
+                    <option value="鱼峰公园">
+                    <option value="魁星塔">
+                    <option value="高西沟生态园">
+                    <option value="高桂三潭风景区">
+                    <option value="高峰寺">
+                    <option value="高山岭">
+                    <option value="高山寺">
+                    <option value="骨麻湖">
+                    <option value="驮娘江">
+                    <option value="马鹿山奇石博览园">
+                    <option value="马鞍山">
+                    <option value="马湖风景区">
+                    <option value="马坝人遗址">
+                    <option value="马场湖生态旅游区">
+                    <option value="马嘶岩寺">
+                    <option value="香零山">
+                    <option value="香积山溶洞">
+                    <option value="香山景区">
+                    <option value="香山">
+                    <option value="首阳山景区">
+                    <option value="饶平土楼">
+                    <option value="饮马池">
+                    <option value="飞龙湖旅游度假区">
+                    <option value="飞水洞">
+                    <option value="飞水寨景区">
+                    <option value="飞天山国家地质公园">
+                    <option value="韶关国家森林公园">
+                    <option value="韭菜沟">
+                    <option value="靖远法泉寺">
+                    <option value="青龙山风景区">
+                    <option value="青神中岩">
+                    <option value="青海湖洱海">
+                    <option value="青海湖二郎剑景区">
+                    <option value="青木川自然保护区">
+                    <option value="青山岭森林公园">
+                    <option value="青山夜郎群落遗址">
+                    <option value="青云岩">
+                    <option value="霞给藏族文化生态旅游村">
+                    <option value="霍尔果斯国门景区">
+                    <option value="霍城薰衣草">
+                    <option value="霍伦河">
+                    <option value="雷州古城">
+                    <option value="雪域温泉水世界">
+                    <option value="雨湖公园">
+                    <option value="集安洞沟古墓">
+                    <option value="雅丹魔鬼城自然及历史陈列馆">
+                    <option value="隐山湖湘文化源生态旅游区">
+                    <option value="隆务河">
+                    <option value="陕西清真大寺">
+                    <option value="陕甘边照金革命根据地旧址">
+                    <option value="陈白沙纪念馆">
+                    <option value="陈家洞景区">
+                    <option value="阿瓦提丝绸古道">
+                    <option value="阿拉山口口岸">
+                    <option value="阿拉勒巴格佛寺">
+                    <option value="阿尔金山自然保护区">
+                    <option value="阿克吐别克钢索桥">
+                    <option value="阳明山国家森林公园">
+                    <option value="阳坝自然风景区">
+                    <option value="阳光盆景园">
+                    <option value="阆中大佛寺">
+                    <option value="间歇泉">
+                    <option value="门莫扎嘎山脉">
+                    <option value="长码头">
+                    <option value="长白山虎林园">
+                    <option value="长白山火山群">
+                    <option value="长白山卧佛">
+                    <option value="长白山冷泉">
+                    <option value="长山尾炮台">
+                    <option value="长堤风貌街">
+                    <option value="锦阳湖">
+                    <option value="锦绣园">
+                    <option value="锦江大峡谷">
+                    <option value="锦屏峰">
+                    <option value="错鄂">
+                    <option value="铜锣坝国家森林公园">
+                    <option value="铜川牡丹园">
+                    <option value="铜川">
+                    <option value="铁路公园">
+                    <option value="铁壁峰">
+                    <option value="铁厂沟石刻">
+                    <option value="钦山寺">
+                    <option value="钟山公园">
+                    <option value="金鼎公园">
+                    <option value="金鞭溪大峡谷">
+                    <option value="金锁关">
+                    <option value="金花桫椤自然保护区">
+                    <option value="金线泉">
+                    <option value="金秀莲花山景区">
+                    <option value="野麻湾堡">
+                    <option value="野钟自然保护区">
+                    <option value="野人谷">
+                    <option value="野人岛">
+                    <option value="醇酒厂风景区">
+                    <option value="酒钢水上欢乐园">
+                    <option value="酒泉市博物馆">
+                    <option value="酒埠江国家地质公园">
+                    <option value="鄂木措景区">
+                    <option value="都龙边境集市">
+                    <option value="都峤柚谷">
+                    <option value="都峤山森林公园">
+                    <option value="都兰狩猎场">
+                    <option value="郭麻日古堡">
+                    <option value="邵阳南山风景名胜">
+                    <option value="遮阳山旅游风景区">
+                    <option value="道家村">
+                    <option value="通灵大瀑布">
+                    <option value="迷途喀什旗舰店">
+                    <option value="迪麻洛">
+                    <option value="迥龙塔">
+                    <option value="返湾湖风景区">
+                    <option value="边塞新乐章">
+                    <option value="边城公园">
+                    <option value="赤水丹霞旅游区·佛光岩">
+                    <option value="赤壁古战场">
+                    <option value="赞塘玉益拉康">
+                    <option value="赞丹寺">
+                    <option value="贾登峪">
+                    <option value="贺州土瑶寨风情山庄">
+                    <option value="贺兰山风景区">
+                    <option value="贵德文庙及玉皇阁">
+                    <option value="贡巴寺">
+                    <option value="贞观寺">
+                    <option value="谢鲁山庄风景名胜区">
+                    <option value="诗墙公园">
+                    <option value="诏安土楼(在田楼）">
+                    <option value="角楼和敌楼">
+                    <option value="观音洞">
+                    <option value="观日峰">
+                    <option value="见天坝瀑布">
+                    <option value="西长城">
+                    <option value="西部第一关-伊尔克斯坦口岸">
+                    <option value="西藏盐井千年古盐田">
+                    <option value="西狭颂景区">
+                    <option value="西洞庭湖湿地保护区">
+                    <option value="西江夜景">
+                    <option value="西山风景名胜区">
+                    <option value="西山民俗风情园">
+                    <option value="西夏博物馆">
+                    <option value="西塞山风景区">
+                    <option value="西双版纳旅游景区专线车">
+                    <option value="西南植物园">
+                    <option value="襄阳梦想方程式赛车场">
+                    <option value="衡阳">
+                    <option value="螺丝壳">
+                    <option value="蝴蝶谷生态旅游度假区">
+                    <option value="虹河水上乐园">
+                    <option value="虎门石洞森林公园">
+                    <option value="虎跳峡（香格里拉段）">
+                    <option value="虎岩公园">
+                    <option value="薤山国家森林公园">
+                    <option value="蓝洋温泉国家森林公园">
+                    <option value="蓝月谷">
+                    <option value="蒙古族风情园">
+                    <option value="董志原">
+                    <option value="董府">
+                    <option value="营官藏寨">
+                    <option value="菊城金瓣">
+                    <option value="莲花湖">
+                    <option value="莲花墩">
+                    <option value="荔波樟江">
+                    <option value="茶陵县工农兵政府旧址">
+                    <option value="茶山湖">
+                    <option value="茶卡盐湖">
+                    <option value="茨中天主教堂">
+                    <option value="茉莉轩">
+                    <option value="英德国家森林公园">
+                    <option value="英山龙潭峡漂流">
+                    <option value="英尔力克沙漠">
+                    <option value="英吉沙县文化馆">
+                    <option value="苏武墓">
+                    <option value="苏巴什故城">
+                    <option value="花龙沟竹海">
+                    <option value="花嘎溶斗">
+                    <option value="花儿沟">
+                    <option value="舍身崖">
+                    <option value="腾冲火山群">
+                    <option value="胡田阿达古城">
+                    <option value="胡志明小道">
+                    <option value="胡家院">
+                    <option value="胜境关">
+                    <option value="肖公嘴">
+                    <option value="耿马土司府">
+                    <option value="老虎背">
+                    <option value="翡翠峡">
+                    <option value="翠泉森林探险乐园">
+                    <option value="羚羊峡">
+                    <option value="羚羊寺">
+                    <option value="美的雨">
+                    <option value="羊蹄岭">
+                    <option value="羊秀自然风景区">
+                    <option value="罗通山风景区">
+                    <option value="罗浮山">
+                    <option value="罗定龙湾生态旅游区">
+                    <option value="罗什寺">
+                    <option value="网湖湿地">
+                    <option value="绿天庵">
+                    <option value="绥阳宽阔水原始森林">
+                    <option value="织女峰">
+                    <option value="红豆村">
+                    <option value="红海草原">
+                    <option value="红海湾遮浪角">
+                    <option value="红楼">
+                    <option value="红山堡">
+                    <option value="红安烈士陵园">
+                    <option value="红园">
+                    <option value="红四方面军总指挥部旧址纪念馆">
+                    <option value="红军四渡赤水太平渡陈列馆">
+                    <option value="紫霞峰">
+                    <option value="紫溪山森林公园">
+                    <option value="米仓山国家森林公园">
+                    <option value="米仓山古栈道">
+                    <option value="简阳白塔园">
+                    <option value="笔架山公园">
+                    <option value="笔架山">
+                    <option value="笔架城">
+                    <option value="竹湖园公园">
+                    <option value="窦圌山">
+                    <option value="穿岩">
+                    <option value="穿云洞公园">
+                    <option value="积石雄关">
+                    <option value="禹迹山大佛旅游景区">
+                    <option value="福源景区">
+                    <option value="福寿山森林公园">
+                    <option value="福圣寺">
+                    <option value="禄丰恐龙博物馆">
+                    <option value="禄丰五台山">
+                    <option value="禄丰世界恐龙谷">
+                    <option value="神湖">
+                    <option value="神农城炎帝文化主题公园">
+                    <option value="神农公园">
+                    <option value="碧云池">
+                    <option value="石门沟草原公园">
+                    <option value="石门文庙">
+                    <option value="石羊孔庙">
+                    <option value="石炮台公园">
+                    <option value="石河子大学">
+                    <option value="石拱寺">
+                    <option value="石庙山">
+                    <option value="石峡海瑞祖居">
+                    <option value="石岛">
+                    <option value="石家河文化遗址">
+                    <option value="石头开花">
+                    <option value="石嘴山">
+                    <option value="石刻突厥石人像">
+                    <option value="真武山公园">
+                    <option value="真佛山景区">
+                    <option value="相山瀑布">
+                    <option value="目屿岛">
+                    <option value="盛贝特海洋水族馆">
+                    <option value="盘橐城">
+                    <option value="盘县高原草场">
+                    <option value="益塘水库旅游区">
+                    <option value="皮山大清真寺">
+                    <option value="皇帝洞">
+                    <option value="百草坪">
+                    <option value="百漈沟景区">
+                    <option value="百子图文化广场">
+                    <option value="白龙寺">
+                    <option value="白鹿寺">
+                    <option value="白鹭天堂">
+                    <option value="白鹭乐园">
+                    <option value="白鹤观">
+                    <option value="白马洞">
+                    <option value="白玉达唐寺">
+                    <option value="白溪">
+                    <option value="白水洞风景区">
+                    <option value="白查村船形茅草屋">
+                    <option value="白塔寺">
+                    <option value="白塔寺">
+                    <option value="白坡山自然保护区">
+                    <option value="白云寺景区">
+                    <option value="田家沟生态旅游区">
+                    <option value="甘什岭铁棱自然保护区">
+                    <option value="瑞丽淘宝场">
+                    <option value="琼州文化风情街">
+                    <option value="班果土林">
+                    <option value="珠江夜游">
+                    <option value="玛吉阿米">
+                    <option value="玛依塔斯">
+                    <option value="王鼎纪念馆">
+                    <option value="王震将军雕像">
+                    <option value="王池">
+                    <option value="玉龙湖风景区">
+                    <option value="玉龙喀什河">
+                    <option value="玉蓝瀑布">
+                    <option value="玉素甫·哈斯·哈吉甫墓">
+                    <option value="玉浆泉">
+                    <option value="玉梦胜景">
+                    <option value="玉华宫">
+                    <option value="狮子山旅游区">
+                    <option value="状元洲">
+                    <option value="牧马滩">
+                    <option value="牂牁江风景名胜区">
+                    <option value="爱布瀑布群">
+                    <option value="焉耆七个星千佛洞">
+                    <option value="热水墓群">
+                    <option value="热作两院植物园">
+                    <option value="炳蔚塔">
+                    <option value="灼甫草场">
+                    <option value="灵通山">
+                    <option value="火山岛">
+                    <option value="澄水洞（咸宁131工程）">
+                    <option value="潼关">
+                    <option value="漠阳江">
+                    <option value="漠沙大沐浴旅游文化生态村">
+                    <option value="漓江精华游">
+                    <option value="滨河大道">
+                    <option value="滨河公园">
+                    <option value="满家古苗寨">
+                    <option value="滕王阁">
+                    <option value="滕代远纪念馆">
+                    <option value="湘鄂西历史革命纪念馆">
+                    <option value="湘潭文庙">
+                    <option value="渭南">
+                    <option value="温宿大峡谷">
+                    <option value="清真寺拱北">
+                    <option value="清澜港景区">
+                    <option value="清江湖">
+                    <option value="清峰寺">
+                    <option value="清代考院博物馆">
+                    <option value="淖毛湖">
+                    <option value="海甸岛">
+                    <option value="海洋大学水生生物博物馆">
+                    <option value="海底彩带">
+                    <option value="海峰湿地">
+                    <option value="海南天涯热带雨林博物馆">
+                    <option value="海南南坤民族风情旅游区">
+                    <option value="浮山风景名胜区">
+                    <option value="浪漫草海风景区">
+                    <option value="浪士当景区">
+                    <option value="浦美村">
+                    <option value="流沙会议旧址">
+                    <option value="洗衣亭">
+                    <option value="洒金谷风景名胜区">
+                    <option value="泽当寺">
+                    <option value="泼水节观礼台">
+                    <option value="泸州老窖国宝窖池">
+                    <option value="泥凼石林">
+                    <option value="泉水溶洞群">
+                    <option value="河滨公园">
+                    <option value="河源越王山风景区">
+                    <option value="河津寺">
+                    <option value="河洑国家森林公园">
+                    <option value="河曲马场">
+                    <option value="沧源司岗里景区">
+                    <option value="沙柳河景区">
+                    <option value="沙州市场">
+                    <option value="江门东龙游乐世界">
+                    <option value="江孜历史文化陈列馆">
+                    <option value="汕头老城">
+                    <option value="汉人街">
+                    <option value="汉中牡丹园">
+                    <option value="汉中油菜花海">
+                    <option value="永庆文化旅游景区">
+                    <option value="永州异蛇村">
+                    <option value="水银河景区">
+                    <option value="水府庙">
+                    <option value="毛感千龙洞">
+                    <option value="毗卢洞文物景区">
+                    <option value="正阳步行街">
+                    <option value="樵楼晓角">
+                    <option value="横档岛">
+                    <option value="槽渔滩风景名胜区">
+                    <option value="槟榔江风光">
+                    <option value="榔木水寨">
+                    <option value="榆林明长城">
+                    <option value="梯子河">
+                    <option value="梯云温泉">
+                    <option value="梨文化博览园">
+                    <option value="梦之谷">
+                    <option value="桓侯宫">
+                    <option value="桑株岩画">
+                    <option value="桑周寺">
+                    <option value="桑丹康桑雪山">
+                    <option value="桄榔庵">
+                    <option value="桃花公园">
+                    <option value="格尔木河">
+                    <option value="格姆女神山">
+                    <option value="栖云峰">
+                    <option value="柳羊溶洞">
+                    <option value="柳湾墓地">
+                    <option value="柳侯祠">
+                    <option value="柞水终南山秦楚古道">
+                    <option value="柏林古镇">
+                    <option value="枫树坝水库">
+                    <option value="枫木鹿场">
+                    <option value="果洛州群众艺术馆">
+                    <option value="林氏三兄弟故居">
+                    <option value="林则徐销烟池旧址">
+                    <option value="松涛天湖风景区">
+                    <option value="松桦恋">
+                    <option value="松山湖中心公园">
+                    <option value="杨东山十二度水自然保护区">
+                    <option value="杜鹃峡">
+                    <option value="杜家客栈">
+                    <option value="李时珍陵园">
+                    <option value="李家峡北岸生态园风景区">
+                    <option value="李宗仁纪念馆">
+                    <option value="杉王景区">
+                    <option value="朱德旧居">
+                    <option value="木里王国">
+                    <option value="木色旅游度假风景区">
+                    <option value="望海楼">
+                    <option value="月亮湖旅游区">
+                    <option value="曹禺纪念馆">
+                    <option value="曲溪">
+                    <option value="景戈白塔">
+                    <option value="普安县烈士陵园">
+                    <option value="昭山风景区">
+                    <option value="春秋祠">
+                    <option value="明星景区">
+                    <option value="明城">
+                    <option value="昆仑山口">
+                    <option value="昂拉千户宅院">
+                    <option value="旧州老街">
+                    <option value="日月湾水上运动">
+                    <option value="无量山自然保护区">
+                    <option value="方山森林公园">
+                    <option value="新疆科技馆">
+                    <option value="新沙岛">
+                    <option value="新政离堆">
+                    <option value="新寨玛尼城（嘉那玛尼堆）">
+                    <option value="新城堡遗址">
+                    <option value="文峰木塔">
+                    <option value="文学泉">
+                    <option value="敦煌石窟艺术保护研究陈列中心">
+                    <option value="敦煌历史博览园">
+                    <option value="敖家古墓石刻">
+                    <option value="收复西沙纪念碑">
+                    <option value="攀钢">
+                    <option value="拜城县国际狩猎场">
+                    <option value="拉甫却克古城">
+                    <option value="托克逊雅丹地貌">
+                    <option value="扎龙沟景区">
+                    <option value="扎西会址">
+                    <option value="扎日神山">
+                    <option value="扎什文化广场">
+                    <option value="户部巷">
+                    <option value="戏台">
+                    <option value="戎圩古镇（龙圩镇）">
+                    <option value="慈云寺">
+                    <option value="意景园水世界">
+                    <option value="惠州昆山峡森林海漂流">
+                    <option value="恰尔巴格风情园">
+                    <option value="恩阳古镇">
+                    <option value="怒江溜索">
+                    <option value="念青唐古拉观景台">
+                    <option value="德阳文庙">
+                    <option value="德夯苗寨">
+                    <option value="徐闻古港">
+                    <option value="彭德怀故居与纪念馆">
+                    <option value="彩云洞">
+                    <option value="张爱萍将军旧居">
+                    <option value="张澜纪念室">
+                    <option value="张掖">
+                    <option value="张建成石刻墓坊">
+                    <option value="张家界世界地质公园博物馆">
+                    <option value="张威纪念亭">
+                    <option value="弄友原始森林">
+                    <option value="异龙湖">
+                    <option value="康赛寺">
+                    <option value="康格多山">
+                    <option value="府谷文庙">
+                    <option value="庄浪紫荆山公园">
+                    <option value="广济楼">
+                    <option value="广汉白马寺">
+                    <option value="平凉宝塔">
+                    <option value="平凉">
+                    <option value="常美切巴寺">
+                    <option value="布隆赛乡村文化旅游区">
+                    <option value="巴音河">
+                    <option value="巴里坤古民宅">
+                    <option value="巴郎山">
+                    <option value="巴厘村">
+                    <option value="川北民俗文化园">
+                    <option value="嵩云山">
+                    <option value="崖州古城">
+                    <option value="崇左斜塔">
+                    <option value="崀山玉女岩">
+                    <option value="岳杨林">
+                    <option value="岱祠楼">
+                    <option value="岣嵝峰">
+                    <option value="山门风景区">
+                    <option value="山湖秀色">
+                    <option value="山口红树林">
+                    <option value="山丹大佛寺">
+                    <option value="屈原故里">
+                    <option value="尼牙孜庄园">
+                    <option value="尕海湖">
+                    <option value="少华山森林公园索道">
+                    <option value="小野马岭">
+                    <option value="小草坝风景区">
+                    <option value="小布达拉">
+                    <option value="小崆峒">
+                    <option value="小天池">
+                    <option value="小南海风景区">
+                    <option value="将军楼公园">
+                    <option value="寸金公园">
+                    <option value="寒气沟">
+                    <option value="宝霞山公园">
+                    <option value="宝林古寺">
+                    <option value="宝山寺">
+                    <option value="官山森林公园">
+                    <option value="宋庆龄祖居">
+                    <option value="安顺云峰屯堡文化风景区">
+                    <option value="安塞县文化文物馆">
+                    <option value="宁远文庙">
+                    <option value="宁江森林公园">
+                    <option value="孤隼峰">
+                    <option value="孤插山(三块石)">
+                    <option value="孤山堡">
+                    <option value="孟定洞景佛寺">
+                    <option value="孝登寺">
+                    <option value="孔雀山庄">
+                    <option value="子昂故里">
+                    <option value="子午道">
+                    <option value="好龙天坑群">
+                    <option value="好吃街">
+                    <option value="女娲祠">
+                    <option value="太统山旅游景区">
+                    <option value="太白山">
+                    <option value="太极湖·太极岛">
+                    <option value="太平狮山">
+                    <option value="太平天国永安活动旧址">
+                    <option value="太子山王莽洞景区">
+                    <option value="太子山国家森林公园">
+                    <option value="太和花园">
+                    <option value="太史坊">
+                    <option value="天豁峰">
+                    <option value="天河风景区">
+                    <option value="天山昆仑山交汇">
+                    <option value="天堂湖景区">
+                    <option value="天华山国家森林公园">
+                    <option value="天保口岸">
+                    <option value="天下灵山">
+                    <option value="大龙洞">
+                    <option value="大野马岭">
+                    <option value="大藤峡风景区">
+                    <option value="大芦村民俗风情旅游区">
+                    <option value="大渡卡遗址">
+                    <option value="大河口西海渔村景区">
+                    <option value="大武口明长城">
+                    <option value="大桂山国家森林公园">
+                    <option value="大星山炮台">
+                    <option value="大川生态旅游区">
+                    <option value="大崎山">
+                    <option value="大岭山森林公园">
+                    <option value="大小井省级风景名胜区">
+                    <option value="大孤山">
+                    <option value="大坡岭省级森林公园">
+                    <option value="大千园">
+                    <option value="大佛寺石窟">
+                    <option value="大众巷">
+                    <option value="夜郞谷">
+                    <option value="夜郎谷">
+                    <option value="夜游三亚湾">
+                    <option value="多贡麻寺">
+                    <option value="多宝园">
+                    <option value="多宝佛塔">
+                    <option value="墨庄">
+                    <option value="塘尾明清古村落">
+                    <option value="塘厦观光公园">
+                    <option value="塔云山景区">
+                    <option value="培风塔">
+                    <option value="城头山遗址公园">
+                    <option value="城固钟楼">
+                    <option value="坝王岭">
+                    <option value="坚木达寺">
+                    <option value="坐龙峡风景区">
+                    <option value="地藏寺">
+                    <option value="地王观光">
+                    <option value="土旦热麦寺">
+                    <option value="土司行宫">
+                    <option value="圆通寺">
+                    <option value="圆觉洞摩崖造像风景区">
+                    <option value="圆明寺">
+                    <option value="国家地质公园博物馆">
+                    <option value="国家地质公园">
+                    <option value="固原">
+                    <option value="嘎朗王宫遗址">
+                    <option value="嘎朗湖景区">
+                    <option value="嘎尔寺">
+                    <option value="喘气坡">
+                    <option value="喀什天门大峡谷">
+                    <option value="喀什商业步行街">
+                    <option value="唐僧晒经台">
+                    <option value="哀牢山自然保护区">
+                    <option value="咸阳">
+                    <option value="和日寺">
+                    <option value="吾屯上寺">
+                    <option value="吴忠">
+                    <option value="向警予故居">
+                    <option value="吐鲁番图书馆">
+                    <option value="吐尔地阿吉庄园">
+                    <option value="后河原始生态旅游区">
+                    <option value="后峡景区">
+                    <option value="吊罗山">
+                    <option value="吉祥花滩">
+                    <option value="吉林文庙">
+                    <option value="吉星岩">
+                    <option value="吉庆街">
+                    <option value="叶帅故居">
+                    <option value="可可托海景区">
+                    <option value="古渡龙王庙">
+                    <option value="古县衙乐城">
+                    <option value="古动物化石博物馆">
+                    <option value="古兜温泉山泉水世界">
+                    <option value="反弹琵琶雕像">
+                    <option value="双溪湖风景区">
+                    <option value="双溪明月">
+                    <option value="双湖无人区">
+                    <option value="双峰晚钟">
+                    <option value="原子城纪念馆">
+                    <option value="印象蓝泊湾生态观光园">
+                    <option value="卧龙洞奇观">
+                    <option value="卧龙山">
+                    <option value="卧龙大熊猫自然保护区">
+                    <option value="卧虎峰">
+                    <option value="卡昂寺">
+                    <option value="卡拉先格尔地震断裂带">
+                    <option value="博鳌亚洲论坛永久会址">
+                    <option value="博鳌">
+                    <option value="南龛石窟">
+                    <option value="南长城">
+                    <option value="南溪河风景区">
+                    <option value="南湖自然保护区">
+                    <option value="南洞名胜风景保护区">
+                    <option value="南沙湾沙滩">
+                    <option value="南江第一湾">
+                    <option value="南武当山风景区">
+                    <option value="南强生态文明村">
+                    <option value="南山牧场">
+                    <option value="南塔公园">
+                    <option value="南国槟榔庄园">
+                    <option value="南伞跨国溶洞">
+                    <option value="华阳景区">
+                    <option value="华盖峰">
+                    <option value="华安土楼">
+                    <option value="华侨围屋">
+                    <option value="半月山大佛">
+                    <option value="千米国画长廊">
+                    <option value="千家峒大泊水瀑布">
+                    <option value="千家寨">
+                    <option value="千家坪">
+                    <option value="十营庄堡址">
+                    <option value="十万沟-大阴山">
+                    <option value="北长城">
+                    <option value="北武当庙">
+                    <option value="北峰山峡谷漂流">
+                    <option value="勐马瀑布">
+                    <option value="加满清真寺">
+                    <option value="刘光第墓">
+                    <option value="刘三姐故里景区">
+                    <option value="凤庆青龙桥">
+                    <option value="凤庆石洞寺">
+                    <option value="凤庆文庙">
+                    <option value="凤山祖庙旅游区">
+                    <option value="凤凰谷">
+                    <option value="凤凰山森林公园">
+                    <option value="凤凰山公园">
+                    <option value="净土寺">
+                    <option value="冷水河自然保护区">
+                    <option value="冶勒自然保护区">
+                    <option value="冰水泉">
+                    <option value="冠冕峰">
+                    <option value="军垦第一井">
+                    <option value="兴隆热带花园">
+                    <option value="兴文石海">
+                    <option value="兴义清真寺">
+                    <option value="兰州清真寺建筑">
+                    <option value="兰州植物园">
+                    <option value="兰州地震博物馆">
+                    <option value="六祖寺">
+                    <option value="六枝梭嘎长角苗">
+                    <option value="六枝梭嘎生态博物馆">
+                    <option value="六库">
+                    <option value="八门湾绿道">
+                    <option value="八甲景区">
+                    <option value="八宿嘎学岩画">
+                    <option value="八大石">
+                    <option value="党岭风光">
+                    <option value="党岭自然保护区">
+                    <option value="党家岔堰塞湖">
+                    <option value="克州冰川国家森林公园">
+                    <option value="克孜尔魔鬼城">
+                    <option value="光雾山小巫峡景区">
+                    <option value="元谋人陈列馆">
+                    <option value="倒生根公园">
+                    <option value="保安睡佛">
+                    <option value="俄贤岭">
+                    <option value="依拉草原">
+                    <option value="佛庙">
+                    <option value="佛宝森林公园">
+                    <option value="佗城东山寺">
+                    <option value="佐海黑教寺">
+                    <option value="伊斯兰教徒墓葬群">
+                    <option value="伊吾蝴蝶谷">
+                    <option value="伊吾焕彩湖">
+                    <option value="伊吾烈士陵园">
+                    <option value="仲山森林公园（关中第一峡）">
+                    <option value="仙湖度假区">
+                    <option value="仙山公园">
+                    <option value="仙安石林">
+                    <option value="仙女山">
+                    <option value="仙人掌大峡谷">
+                    <option value="仁措湖">
+                    <option value="什邡穿心店地震遗址">
+                    <option value="人民广场">
+                    <option value="人民公园">
+                    <option value="交河古村">
+                    <option value="亚门草场">
+                    <option value="五道峡景区">
+                    <option value="五通桥">
+                    <option value="五老山森林公园">
+                    <option value="五峰山国家森林公园">
+                    <option value="五女峰国家森林公园">
+                    <option value="五奎山风景区">
+                    <option value="五台-皇城景区">
+                    <option value="五凤山森林公园">
+                    <option value="互助土族故土园景区">
+                    <option value="云顶草场">
+                    <option value="云青寺">
+                    <option value="云雾山草原">
+                    <option value="云阳国家森林公园">
+                    <option value="云门囤">
+                    <option value="云盘公园">
+                    <option value="云湖山">
+                    <option value="云水谣古镇">
+                    <option value="云崖寺国家森林公园">
+                    <option value="云峰寺宗教文化旅游区">
+                    <option value="云岩寺">
+                    <option value="云山国家森林公园">
+                    <option value="乾安泥林">
+                    <option value="乳源南水水库">
+                    <option value="九龙瀑布群国家森林公园">
+                    <option value="九龙湾漂游">
+                    <option value="九龙峡">
+                    <option value="九莲泉">
+                    <option value="九皇山">
+                    <option value="九泷十八滩">
+                    <option value="九巅峡">
+                    <option value="九嶷山国家森林公园">
+                    <option value="乘槎河">
+                    <option value="乐至报国寺">
+                    <option value="乐会古城">
+                    <option value="乌龙山大峡谷">
+                    <option value="乌鲁木齐海洋馆">
+                    <option value="乌鲁木齐儿童公园">
+                    <option value="乌江三峡">
+                    <option value="乌什燕子山">
+                    <option value="乌什喀特古城">
+                    <option value="丹霞山">
+                    <option value="临夏">
+                    <option value="中路藏寨">
+                    <option value="中山纪念堂">
+                    <option value="中山中路夜市">
+                    <option value="中国侗文化城">
+                    <option value="中华洞天">
+                    <option value="中华民族文化村">
+                    <option value="严家祠堂">
+                    <option value="两湖大瀑布">
+                    <option value="东长城">
+                    <option value="东白杨沟">
+                    <option value="东湖公园">
+                    <option value="东方山风景区">
+                    <option value="东峰（朝阳峰）">
+                    <option value="东峰林景区">
+                    <option value="东岳寺">
+                    <option value="东岛">
+                    <option value="东山峰滑雪场">
+                    <option value="东山峰">
+                    <option value="东嘎寺">
+                    <option value="东华寺">
+                    <option value="东北风长白山大剧院">
+                    <option value="东公馆">
+                    <option value="上湘侗寨">
+                    <option value="上岳古民居">
+                    <option value="三角山滑道">
+                    <option value="三狮洞">
+                    <option value="三海岩">
+                    <option value="三洲岩">
+                    <option value="三沈纪念馆">
+                    <option value="三平寺">
+                    <option value="三宣堂(刘永福故居)">
+                    <option value="三垅沙雅丹">
+                    <option value="三元洞">
+                    <option value="三元塔公园">
+                    <option value="三元塔">
+                    <option value="三仙夹国家森林公园">
+                    <option value="三丈水省级森林公园">
+                    <option value="万福寺">
+                    <option value="万山岛">
+                    <option value="万佛山">
+                    <option value="万佛寺">
+                    <option value="七色海">
+                    <option value="七目嶂风景区">
+                    <option value="七星燕窝岭">
+                    <option value="七星坑自然保护区">
+                    <option value="七宝莲池">
+
                 </datalist>
                 <span class="control-group" id="scenery1_input">
                   <div class="input_add_long_background">
@@ -140,7 +1006,7 @@ background:#FFFFFF; cursor:pointer;" onclick= "highlight_portraits(this)">
 
               <div id="div_submit" class="div_submit">
                 <div class='div_submit_button'>
-                  <input id="submit" type="submit" value="注册" class='button_button disabled' style="font-size:20px; text-align:center; position:relative; width:30%; height:50px; left:-5%; top:70px; cursor:pointer">
+                  <input id="submit" type="submit" value="注册" class='button_button disabled' onclick="submit_register()" style="font-size:20px; text-align:center; position:relative; width:30%; height:50px; left:-5%; top:70px; cursor:pointer">
                 </div>
               </div>
         </form>
@@ -152,6 +1018,43 @@ background:#FFFFFF; cursor:pointer;" onclick= "highlight_portraits(this)">
 
   <script type="text/javascript">
   Current_selection = -1;
+
+  function submit_register(){
+      if(Is_empty() == false){
+        return;
+      }
+
+      alert("感谢您的注册,请于登录界面登入！")
+      linktosignin();
+      var name = $('input[id=name]').val();
+      var mima = $('input[id=mima]').val();
+      var scenery1 = $('input[id=scenery1]').val();
+      var scenery2 = $('input[id=scenery2]').val();
+      var scenery3 = $('input[id=scenery3]').val();
+      var portrait = Current_selection;
+      var url = 'localhost:8080/recommend/register?password=' + mima + '&touxiangId=' + portrait +'&spotName=' + scenery1 + '&userName=' + name;
+      //window.location.href = url;
+
+      var xmlhttp;
+      if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+      }
+      else{// code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xmlhttp.onreadystatechange=function()
+      {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+          document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+        }
+      }
+    xmlhttp.open("GET",url,true);
+    xmlhttp.send();
+
+
+
+  }
 
   function highlight_portraits(ob){
 
@@ -227,10 +1130,12 @@ background:#FFFFFF; cursor:pointer;" onclick= "highlight_portraits(this)">
       alert("您尚未填写喜爱的景点3!")
       return false;
     }
+    if(Current_selection == -1){
+      alert("您尚未选择头像!")
+      return false;
+    }
     return true;
-
   }
-
 
   function __changeFieldValue(of) {
     return ;
