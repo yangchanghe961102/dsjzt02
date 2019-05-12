@@ -30,4 +30,15 @@ function init_spot_list() {
             y = height * 0.9 / 5 * i;
             return "translate(" + width * 0.1 + "," + y + ")";
         })
+
+    spot_item.append("image")
+        .attr("xlink:href", function(d) {
+            return d.picture;
+        })
+        .attr("width", width * 0.3)
+        .attr("height", height * 0.8 / 5)
+        .attr("x", width * 0.05)
+        .attr("y", height * 0.05 / 5)
+
+    
 }
