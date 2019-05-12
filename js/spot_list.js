@@ -38,7 +38,15 @@ function init_spot_list() {
         .attr("width", width * 0.3)
         .attr("height", height * 0.8 / 5)
         .attr("x", width * 0.05)
-        .attr("y", height * 0.05 / 5)
+        .attr("y", height * 0.05 / 5);
 
-    
+    spot_item.append("text")
+        .text(function(d) {
+            return d.spotName;
+        })
+        .attr("font-size", height * 0.8 / 5 / 5)
+        .attr("x", width * 0.4)
+        .attr("y", height * 0.05 / 5 + height * 0.8 / 5 / 5);
+
+
 }
