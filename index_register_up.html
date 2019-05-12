@@ -1025,49 +1025,55 @@ background:#FFFFFF; cursor:pointer;" onclick= "highlight_portraits(this)">
       }
 
       alert("感谢您的注册,请于登录界面登入！")
-      linktosignin();
       var name = $('input[id=name]').val();
       var mima = $('input[id=mima]').val();
       var scenery1 = $('input[id=scenery1]').val();
       var scenery2 = $('input[id=scenery2]').val();
       var scenery3 = $('input[id=scenery3]').val();
       var portrait = Current_selection;
-      var url = 'localhost:8080/recommend/register?password=' + mima + '&touxiangId=' + portrait +'&spotName=' + scenery1 + '&userName=' + name;
-      alert(url)
+      var url = 'http://localhost:8080/recommend/register?password=' + mima + '&touxiangId=' + portrait +'&spotName=' + scenery1 + '&userName=' + name;
+      console.log(url)
       //window.location.href = url;
 
       var getJSON = function(url) {
       return new Promise(function(resolve, reject) {
+      	//alert("try0")
         var xhr = new XMLHttpRequest();
         xhr.open('get', url, true);
         xhr.responseType = 'json';
         xhr.onload = function() {
+          //alert("try0.5")
           var status = xhr.status;
-          if (status == 200) {
+          alert(xhr.status)
+          if(status == 200) 
+          {
             resolve(xhr.response);
-          } else {
+            //alert("success")
+          } 
+          else {
             reject(status);
+            //alert("failed")
           }
         };
         xhr.send();
+        //alert("try1")
       });
     };
-
     getJSON(url).then(function(data) {
         alert('Your Json result is:  ' + data); //you can comment this, i used it to debug
-        
-        
         // var html = '<ul>';
         // for (var i = 0; i < data.length; i++) {
         //     html += '<li>' + 'jobID is:'+data[i].jobID + ', file path is' +data[i].filePath + '</li>';
         // }
         // html += '</ul>';
         
-        
         // document.getElementById('result').innerHTML = html; //display the result in an HTML element
     }, function(status) { //error detection....
       alert('Something went wrong.');
     });
+
+    
+    	linktosignin();
 
   }
 

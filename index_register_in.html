@@ -46,7 +46,7 @@
 
     <div class='box_main' style="background:#87CEFA; position: absolute; top: 45%; left: 30%; width: 40%; height: 30%;">
       <div id="register" class="register">
-        <form id="form" action="index.html" method="post" onSubmit="return Is_empty();">
+        <form id="form" action="" method="post" onSubmit="return false;">
           <div id="form_submit" class="form_submit">
             <div class="fieldset" style=" position:relative; left: 40%;">
               <div class="field-group">
@@ -69,7 +69,7 @@
 
               <div id="div_submit" class="div_submit">
                 <div class='div_submit_button'>
-                  <input id="submit" type="submit" value="登录" class='button_button disabled' style="font-size:20px; text-align:center; position:relative; width:30%; height:50px; left:-5%; top:60px; cursor:pointer">
+                  <input id="submit" type="submit" value="登录" class='button_button disabled' onclick="submit_signin()" style="font-size:20px; text-align:center; position:relative; width:30%; height:50px; left:-5%; top:60px; cursor:pointer">
                 </div>
               </div>
         </form>
@@ -91,6 +91,57 @@
   function linktosignin(){
     window.location.href="index_register_in.html";
   }
+
+  function submit_signin()
+  {
+    if(Is_empty() == false){
+        return;
+    }
+    var name = $('input[id=name]').val();
+    var mima = $('input[id=mima]').val();
+    var url = 'http://localhost:8080/recommend/login?userName=' + name + '&password=' + mima;
+    console.log(url)
+
+    var getJSON = function(url) {
+      return new Promise(function(resolve, reject) {
+        //alert("try0")
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', url, true);
+        xhr.responseType = 'json';
+        xhr.onload = function() {
+          //alert("try0.5")
+          var status = xhr.status;
+          alert(xhr.status)
+          if(status == 200) 
+          {
+            resolve(xhr.response);
+            alert("success")
+          } 
+          else {
+            reject(status);
+            alert("failed")
+          }
+        };
+        xhr.send();
+        //alert("try1")
+      });
+    };
+    getJSON(url).then(function(data) {
+        alert('Your Json result is:  ' + data); //you can comment this, i used it to debug
+        // var html = '<ul>';
+        // for (var i = 0; i < data.length; i++) {
+        //     html += '<li>' + 'jobID is:'+data[i].jobID + ', file path is' +data[i].filePath + '</li>';
+        // }
+        // html += '</ul>';
+        
+        // document.getElementById('result').innerHTML = html; //display the result in an HTML element
+    }, function(status) { //error detection....
+      alert('Something went wrong.');
+    });
+
+    linktoindex()
+  }
+
 
   function Is_empty(){
     if ($('#name').val() == '') {
