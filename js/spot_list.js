@@ -18,5 +18,16 @@ function init_spot_list() {
         .attr("id", "spot_items")
         .attr("transform", "translate(0," + height * 0.1 + ")");
 
-    
+    var spot_item = spot_items.selectAll(".spot_item")
+        .data(curr_list_test)
+        .enter()
+        .append("g")
+        .attr("class", "spot_item")
+        .attr("name", function(d) {
+            return d.spotName;
+        })
+        .attr("transform", function(d, i) {
+            y = height * 0.9 / 5 * i;
+            return "translate(" + width * 0.1 + "," + y + ")";
+        })
 }
