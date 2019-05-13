@@ -34,6 +34,8 @@ function init_spot_list() {
             //alert(d.spotName);
             d3.select('#spot_detail').style('visibility','visible');
             d3.selectAll('.kuang').style('opacity','0.3');
+            d3.select("#spot_image").src = d.picture;
+            alert(d.picture)
         })
         .on("mouseover",function(d){
             this.style.cursor = "pointer";
