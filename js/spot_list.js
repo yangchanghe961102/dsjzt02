@@ -87,5 +87,6 @@ function init_spot_list() {
     //     .text("上一页")
     //     .attr("font-size", height * 0.06)
     //     .attr("x", width * 0)
-    //     .attr("y", height * 0.09);
+    //     .attr("y", height * 0.08);
+    // var c_page = 
 }
