@@ -1,4 +1,4 @@
-USERNAME = "111";
+var USERNAME = "111";
 var USERHEAD = "image/user.jpg";
 var CITY_NUM = 20;
 var city_list = ["北京", "厦门", "上海", "杭州", "南京", "成都"];

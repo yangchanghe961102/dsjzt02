@@ -1038,24 +1038,23 @@ background:#FFFFFF; cursor:pointer;" onclick= "highlight_portraits(this)">
       xhr.open('get', url, true);
       xhr.responseType = 'json';
       xhr.onload = function() {
-          console.log("try0.5");
+          // console.log("try0.5");
           var status = xhr.status;
-          alert(xhr.status)
+          // alert(xhr.status)
           if(status == 200)
           {
-              //resolve(xhr.response);
-              console.log(xhr.response.password)
-              alert("success")
+              // resolve(xhr.response);
+              // console.log(xhr.response.password)
+              console.log("success")
           }
           else {
-              //reject(status);
-              alert("failed")
+              // reject(status);
+              // alert("failed")
           }
       };
       xhr.send();
 
-    
-    	//linktosignin();
+      linktosignin();
 
   }
 
