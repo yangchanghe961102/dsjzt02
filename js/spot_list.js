@@ -30,6 +30,17 @@ function init_spot_list() {
             y = height * 0.9 / item_num * i;
             return "translate(" + width * 0.1 + "," + y + ")";
         })
+        .on("click",function(d,i){
+            //alert(d.spotName);
+            d3.select('#spot_detail').style('visibility','visible');
+            d3.selectAll('.kuang').style('opacity','0.3');
+        })
+        .on("mouseover",function(d){
+            this.style.cursor = "pointer";
+        })
+        .on("mouseout", function(d){
+            this.style.cursor = "default";
+        })
 
     spot_item.append("image")
         .attr("xlink:href", function(d) {
