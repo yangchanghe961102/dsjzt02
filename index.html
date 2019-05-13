@@ -6,30 +6,48 @@
         .kuang {
             border: 3px solid #ddd;
         }
+        .kuang_middle{
+            border: 3px solid #ddd;
+        }
         .reco_item {
             text-align: center;
+        }
+        .button{
+            border: 3px solid #ddd;
+            background: #87CEFA;
         }
     </style>
 </head>
 <body>
-    <div class = "kuang" id = "spot_list" style = "position: absolute; top: 1%; left: 1%; width: 59%; height: 98%; margin: 0px; padding: 0px;">
+    <div class = "kuang" id = "spot_list" style = "position: absolute; top: 1%; left: 1%; width: 59%; height: 98%; margin: 0px; padding: 0px; opacity: 1;">
     </div>
-    <div class = "kuang" id = "user_info" style = "position: absolute; top: 1%; left: 61%; width: 38%; height: 34%; margin: 0px; padding: 0px;">
+    <div class = "kuang" id = "user_info" style = "position: absolute; top: 1%; left: 61%; width: 38%; height: 34%; margin: 0px; padding: 0px; opacity: 1;">
     </div>
-    <div class = "kuang" id = "reco_list" style = "position: absolute; top: 36%; left: 61%; width: 38%; height: 63%; margin: 0px; padding: 0px;">
+    <div class = "kuang" id = "reco_list" style = "position: absolute; top: 36%; left: 61%; width: 38%; height: 63%; margin: 0px; padding: 0px; opacity: 1;">
+    </div>
+
+    <div class = "kuang_middle" id = "spot_detail" style = "position: absolute; top: 25%; left: 30%; width: 40%; height: 50%; margin: 0px; padding: 0px; visibility: hidden; z-index: 999">
+        
+        <div class = "button" id = "return_button" style = "font-size:50%; text-align:center;cursor:pointer; position: absolute; top: 85%; left: 40%; width: 20%; height: 10%; margin: 0px; padding: 0px;" onclick="backtomainview()">
+            <h1>返回</h1>
+        </div>
+        <img src="" id="spot_image" width="40%" style="position: absolute; top: 5%; left: 5%;" />
+
     </div>
 
     <script src = "js/d3v4.js"></script>
     <script src = "js/jquery-1.4.4.min.js"></script>
-    <script src="js/jquery.params.js"></script>
+    <script src= "js/jquery.params.js"></script>
 
     <script src = "js/global_function.js"></script>
     <script src = "js/user_info.js"></script>
     <script src = "js/reco_list.js"></script>
     <script src = "js/spot_list.js"></script>
     <script src = "js/process_reco_list.js"></script>
+    <script src = "js/spot_detail.js"></script>
 
     <script>
+
         $(function() {
             getName();
 

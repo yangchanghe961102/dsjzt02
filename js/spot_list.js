@@ -30,6 +30,19 @@ function init_spot_list() {
             y = height * 0.9 / item_num * i;
             return "translate(" + width * 0.1 + "," + y + ")";
         })
+        .on("click",function(d,i){
+            //alert(d.spotName);
+            d3.select('#spot_detail').style('visibility','visible');
+            d3.selectAll('.kuang').style('opacity','0.3');
+            d3.select("#spot_image").src = d.picture;
+            alert(d.picture)
+        })
+        .on("mouseover",function(d){
+            this.style.cursor = "pointer";
+        })
+        .on("mouseout", function(d){
+            this.style.cursor = "default";
+        })
 
     spot_item.append("image")
         .attr("xlink:href", function(d) {
@@ -70,9 +83,16 @@ function init_spot_list() {
         .attr("id", "jump")
         .attr("transform", "translate(" + width * 0.4 + ",0)");
 
+<<<<<<< HEAD
     // var p_page = jump_g.append("text")
     //     .text("上一页")
     //     .attr("font-size", height * 0.06)
     //     .attr("x", width * 0)
     //     .attr("y", height * 0.09);
 }
+=======
+
+//     var p_page = jump_g.append("text")
+//         .text("上一页")
+}
+>>>>>>> 88099ac07d438d39c4b39b8cf980e921e511ba2b
