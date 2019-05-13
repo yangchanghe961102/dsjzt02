@@ -83,14 +83,14 @@ function init_reco_list() {
         .attr("fpath", function(d) {
             for (item in spot_list) {
                 if (spot_list[item].spotName === d) {
-                    if (spot_list[item].picture === null)
-                    {
-                        spot_list[item].picture = "image/picture_null.png"
+                    if (spot_list[item].picture === null) {
+                        spot_list[item].picture = "image/picture_null.png";
                     }
                     return spot_list[item].picture;
                 }
             }
-            return null;
+            spot_list[item].picture = "image/picture_null.png";
+            return spot_list[item].picture;
         })
         .attr("transform", function(d, i) {
             x_index = i % 2;
@@ -100,6 +100,33 @@ function init_reco_list() {
             x = x_index * reco_item_w;
             y = y_index * reco_item_h;
             return "translate(" + x + "," + y + ")";
+        })
+        .on("click",function(d, i){
+            var tmp_item = null;
+            for (item in spot_list) {
+                if (spot_list[item].spotName === d) {
+                    tmp_item = spot_list[item];
+                }
+            }
+            //alert(d.spotName);
+            d3.select('#spot_detail').style('visibility','visible');
+            d3.selectAll('.kuang').style('opacity','0.15');
+
+            (document.getElementById("spot_image")).src = tmp_item.picture;
+            if(tmp_item.picture === null){
+                (document.getElementById("spot_image")).src = "image/picture_null.png";
+            }
+            var introduction = (tmp_item.introduce).replace('<p class="inset-p" style="text-indent: 2em">','');
+            introduction = introduction.replace("</p>","");
+            introduction = introduction.replace(" ","");
+            document.getElementById("description").innerHTML = "景点名：" + tmp_item.spotName + "<br />" + "所在城市: " + tmp_item.spotCity + '<br />' + "评分: " + tmp_item.spotGrade + '<br />' +  "城市中排名：" + tmp_item.spotRank + '<br />' + tmp_item.playTime + '<br />' + "简介：" + introduction;
+
+        })
+        .on("mouseover",function(d){
+            this.style.cursor = "pointer";
+        })
+        .on("mouseout", function(d){
+            this.style.cursor = "default";
         })
 
     image_w = reco_item_w * 0.9;
@@ -140,7 +167,7 @@ function init_reco_list() {
 }
 
 function reload_reco_item() {
-    reco_g.selectAll(".reco_item").remove();
+    d3.selectAll(".reco_item").remove();
     var reco_items = reco_g.selectAll(".reco_item")
         .data(reco_list_tmp)
         .enter()
@@ -155,14 +182,14 @@ function reload_reco_item() {
         .attr("fpath", function(d) {
             for (item in spot_list) {
                 if (spot_list[item].spotName === d) {
-                    if (spot_list[item].picture === null)
-                    {
-                        spot_list[item].picture = "image/picture_null.png"
+                    if (spot_list[item].picture === null) {
+                        spot_list[item].picture = "image/picture_null.png";
                     }
                     return spot_list[item].picture;
                 }
             }
-            return null;
+            spot_list[item].picture = "image/picture_null.png";
+            return spot_list[item].picture;
         })
         .attr("transform", function(d, i) {
             x_index = i % 2;
@@ -172,6 +199,33 @@ function reload_reco_item() {
             x = x_index * reco_item_w;
             y = y_index * reco_item_h;
             return "translate(" + x + "," + y + ")";
+        })
+        .on("click",function(d, i){
+            var tmp_item = null;
+            for (item in spot_list) {
+                if (spot_list[item].spotName === d) {
+                    tmp_item = spot_list[item];
+                }
+            }
+            //alert(d.spotName);
+            d3.select('#spot_detail').style('visibility','visible');
+            d3.selectAll('.kuang').style('opacity','0.15');
+
+            (document.getElementById("spot_image")).src = tmp_item.picture;
+            if(tmp_item.picture === null){
+                (document.getElementById("spot_image")).src = "image/picture_null.png";
+            }
+            var introduction = (tmp_item.introduce).replace('<p class="inset-p" style="text-indent: 2em">','');
+            introduction = introduction.replace("</p>","");
+            introduction = introduction.replace(" ","");
+            document.getElementById("description").innerHTML = "景点名：" + tmp_item.spotName + "<br />" + "所在城市: " + tmp_item.spotCity + '<br />' + "评分: " + tmp_item.spotGrade + '<br />' +  "城市中排名：" + tmp_item.spotRank + '<br />' + tmp_item.playTime + '<br />' + "简介：" + introduction;
+
+        })
+        .on("mouseover",function(d){
+            this.style.cursor = "pointer";
+        })
+        .on("mouseout", function(d){
+            this.style.cursor = "default";
         })
 
     image_w = reco_item_w * 0.9;

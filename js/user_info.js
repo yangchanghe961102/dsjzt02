@@ -60,17 +60,17 @@ function init_user_info() {
         })
         .attr("height", text_height * 0.07);
 
-    info_edit.append("image")
-        .attr("xlink:href", "image/edit_icon.jpg")
-        .attr("width", text_height * 0.07)
-        .attr("height", text_height * 0.07);
-
-    info_edit.append("text")
-        .text("编辑")
-        .attr("x", text_height * 0.1)
-        .attr("y", text_height * 0.07)
-        .attr("font-size", text_height * 0.07)
-        .attr("text-decoration", "none");
+    // info_edit.append("image")
+    //     .attr("xlink:href", "image/edit_icon.jpg")
+    //     .attr("width", text_height * 0.07)
+    //     .attr("height", text_height * 0.07);
+    //
+    // info_edit.append("text")
+    //     .text("编辑")
+    //     .attr("x", text_height * 0.1)
+    //     .attr("y", text_height * 0.07)
+    //     .attr("font-size", text_height * 0.07)
+    //     .attr("text-decoration", "none");
 
     info_text.append("text")
         .text("祝您出行愉快！")
@@ -102,17 +102,17 @@ function init_user_info() {
         .attr("x", text_width + (head_width - head_size) / 2)
         .attr("y", head_height * 0.47 + (head_height - head_size) / 2);
 
-    info_edit.on("mouseover", function(d){
-        this.style.cursor = "pointer";
-        d3.select(this).selectAll("text")
-            .attr("text-decoration", "underline");
-    })
-
-    info_edit.on("mouseout", function(d){
-        this.style.cursor = "default";
-        d3.select(this).selectAll("text")
-            .attr("text-decoration", "none");
-    })
+    // info_edit.on("mouseover", function(d){
+    //     this.style.cursor = "pointer";
+    //     d3.select(this).selectAll("text")
+    //         .attr("text-decoration", "underline");
+    // })
+    //
+    // info_edit.on("mouseout", function(d){
+    //     this.style.cursor = "default";
+    //     d3.select(this).selectAll("text")
+    //         .attr("text-decoration", "none");
+    // })
 }
 
 function getTime() {
