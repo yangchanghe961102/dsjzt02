@@ -83,16 +83,9 @@ function init_spot_list() {
         .attr("id", "jump")
         .attr("transform", "translate(" + width * 0.4 + ",0)");
 
-<<<<<<< HEAD
     // var p_page = jump_g.append("text")
     //     .text("上一页")
     //     .attr("font-size", height * 0.06)
     //     .attr("x", width * 0)
     //     .attr("y", height * 0.09);
 }
-=======
-
-//     var p_page = jump_g.append("text")
-//         .text("上一页")
-}
->>>>>>> 88099ac07d438d39c4b39b8cf980e921e511ba2b
