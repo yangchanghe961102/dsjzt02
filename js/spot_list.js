@@ -41,6 +41,7 @@ function init_spot_list() {
             }
             var introduction = (d.introduce).replace('<p class="inset-p" style="text-indent: 2em">','');
             introduction = introduction.replace("</p>","");
+            introduction = introduction.replace(" ","");
             document.getElementById("description").innerHTML = "景点名：" + d.spotName + "<br />" + "所在城市: " + d.spotCity + '<br />' + "评分: " + d.spotGrade + '<br />' +  "城市中排名：" + d.spotRank + '<br />' + d.playTime + '<br />' + "简介：" + introduction;
 
         })
