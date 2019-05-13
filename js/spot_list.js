@@ -34,8 +34,12 @@ function init_spot_list() {
             //alert(d.spotName);
             d3.select('#spot_detail').style('visibility','visible');
             d3.selectAll('.kuang').style('opacity','0.3');
-            d3.select("#spot_image").src = d.picture;
-            alert(d.picture)
+            
+            (document.getElementById("spot_image")).src = d.picture;
+            if(d.picture === null){
+                (document.getElementById("spot_image")).src = "image/picture_null.png";
+            }
+            //console.log( (document.getElementById("spot_image")))
         })
         .on("mouseover",function(d){
             this.style.cursor = "pointer";
@@ -83,10 +87,99 @@ function init_spot_list() {
         .attr("id", "jump")
         .attr("transform", "translate(" + width * 0.4 + ",0)");
 
-    // var p_page = jump_g.append("text")
-    //     .text("上一页")
-    //     .attr("font-size", height * 0.06)
-    //     .attr("x", width * 0)
-    //     .attr("y", height * 0.08);
-    // var c_page = 
+    var p_page = jump_g.append("text")
+        .text("上一页")
+        .attr("id", "p_page")
+        .attr("font-size", height * 0.06)
+        .attr("x", width * 0)
+        .attr("y", height * 0.08);
+
+    var c_page = jump_g.append("text")
+        .text("第 " + cur_page + " 页")
+        .attr("id", "c_page")
+        .attr("font-size", height * 0.06)
+        .attr("x", width * 0.02 + document.getElementById("p_page").getBBox().width)
+        .attr("y", height * 0.08);
+
+    var n_page = jump_g.append("text")
+        .text("下一页")
+        .attr("id", "n_page")
+        .attr("font-size", height * 0.06)
+        .attr("x", width * 0.04 + document.getElementById("p_page").getBBox().width + document.getElementById("c_page").getBBox().width)
+        .attr("y", height * 0.08);
+
+    p_page.on("mouseover", function(d){
+        this.style.cursor = "pointer";
+        d3.select(this).selectAll("text")
+            .attr("text-decoration", "underline");
+    })
+
+    p_page.on("mouseout", function(d){
+        this.style.cursor = "default";
+        d3.select(this).selectAll("text")
+            .attr("text-decoration", "none");
+    })
+
+    p_page.on("click", function(d) {
+        if (cur_page >= 2) {
+            console.log("cur_page: " + cur_page);
+            cur_page = cur_page - 1;
+            curr_list = spot_list.slice(cur_page * item_num, (cur_page + 1) * item_num);
+            reload_reco_item();
+        }
+    })
+
+    n_page.on("mouseover", function(d){
+        this.style.cursor = "pointer";
+        d3.select(this).selectAll("text")
+            .attr("text-decoration", "underline");
+    })
+
+    n_page.on("mouseout", function(d){
+        this.style.cursor = "default";
+        d3.select(this).selectAll("text")
+            .attr("text-decoration", "none");
+    })
+
+    n_page.on("click", function(d) {
+        if (cur_page <= 1000) {
+            console.log("cur_page: " + cur_page);
+            cur_page = cur_page + 1;
+            curr_list = spot_list.slice(cur_page * item_num, (cur_page + 1) * item_num);
+            reload_reco_item();
+        }
+    })
+}
+
+function reload_reco_item() {
+    spot_items.selectAll(".spot_item").remove();
+    var spot_item = spot_items.selectAll(".spot_item")
+        .data(curr_list)
+        .enter()
+        .append("g")
+        .attr("class", "spot_item")
+        .attr("name", function(d) {
+            return d.spotName;
+        })
+        .attr("transform", function(d, i) {
+            y = height * 0.9 / item_num * i;
+            return "translate(" + width * 0.1 + "," + y + ")";
+        })
+        .on("click",function(d,i){
+            //alert(d.spotName);
+            d3.select('#spot_detail').style('visibility','visible');
+            d3.selectAll('.kuang').style('opacity','0.3');
+            
+            (document.getElementById("spot_image")).src = d.picture;
+            if(d.picture === null){
+                (document.getElementById("spot_image")).src = "image/picture_null.png";
+            }
+            //console.log( (document.getElementById("spot_image")))
+        })
+        .on("mouseover",function(d){
+            this.style.cursor = "pointer";
+        })
+        .on("mouseout", function(d){
+            this.style.cursor = "default";
+        })
 }
