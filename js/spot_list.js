@@ -39,7 +39,9 @@ function init_spot_list() {
             if(d.picture === null){
                 (document.getElementById("spot_image")).src = "image/picture_null.png";
             }
-            //console.log( (document.getElementById("spot_image")))
+
+            document.getElementById("description").innerHTML = "景点名：" + d.spotName + "<br />" + "所在城市: " + d.spotCity + '<br />' + "评分: " + d.spotGrade + '<br />' +  "城市中排名：" + d.spotRank + '<br />' + '推荐游玩时间' + d.playTime + '<br />' + "评论：" + d.introduce;
+
         })
         .on("mouseover",function(d){
             this.style.cursor = "pointer";
