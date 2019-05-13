@@ -34,7 +34,7 @@ function init_spot_list() {
             //alert(d.spotName);
             d3.select('#spot_detail').style('visibility','visible');
             d3.selectAll('.kuang').style('opacity','0.15');
-
+            
             (document.getElementById("spot_image")).src = d.picture;
             if(d.picture === null){
                 (document.getElementById("spot_image")).src = "image/picture_null.png";
