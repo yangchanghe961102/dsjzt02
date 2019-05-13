@@ -5,10 +5,15 @@ var city_list = ["北京", "厦门", "上海", "杭州", "南京", "成都"];
 
 var item_num = 6;
 
+var cur_page = 1;
+var reco_cur_num = 1;
+
 var user_info = {};
 var spot_list = {};
 var curr_list = {};
-var reco_list = {};
+var reco_list_origin = {};
+var reco_list = [];
+var reco_list_tmp = [];
 
 var user_info_test = {
     "userId": 4,
@@ -18,7 +23,6 @@ var user_info_test = {
     "password": "123456"
 }
 
-var cur_page = 1;
 var spot_list_test = [
                         {
                             "spotId": "oi10000046",
@@ -220,13 +224,37 @@ var spot_list_test = [
                         }
                     ]
 
-var reco_cur_num = 1;
-var reco_list_test = [
-    "武夷山", "金鞭溪大峡谷", "宋庆龄祖居", "卧龙山", "金鞭溪大峡谷1", "宋庆龄祖居1", "卧龙山1", "金鞭溪大峡谷2", "宋庆龄祖居2", "卧龙山2", "金鞭溪大峡谷3", "宋庆龄祖居3", "卧龙山3", "金鞭溪大峡谷4", "宋庆龄祖居4", "卧龙山4", "金鞭溪大峡谷5", "宋庆龄祖居5", "卧龙山5", "金鞭溪大峡谷2", "宋庆龄祖居2"
-]
+var reco_list_test_origin = {
+    spotName: "武夷山",
+    recommend_1: "金鞭溪大峡谷",
+    recommend_2: "宋庆龄祖居",
+    recommend_3: "卧龙山",
+    recommend_4: "金鞭溪大峡谷1",
+    recommend_5: "宋庆龄祖居1",
+    recommend_6: "卧龙山1",
+    recommend_7: "金鞭溪大峡谷2",
+    recommend_8: "宋庆龄祖居2",
+    recommend_9: "卧龙山2",
+    recommend_10: "金鞭溪大峡谷3",
+    recommend_11: "宋庆龄祖居3",
+    recommend_12: "卧龙山3",
+    recommend_13: "金鞭溪大峡谷4",
+    recommend_14: "宋庆龄祖居4",
+    recommend_15: "卧龙山4",
+    recommend_16: "金鞭溪大峡谷5",
+    recommend_17: "宋庆龄祖居5",
+    recommend_18: "卧龙山5",
+    recommend_19: "金鞭溪大峡谷2",
+    recommend_20: "宋庆龄祖居2"
+}
 
-var reco_list_tmp = reco_list_test.slice(reco_cur_num, reco_cur_num + 4);
+var reco_list_test = ["武夷山", "金鞭溪大峡谷", "宋庆龄祖居", "卧龙山", "金鞭溪大峡谷1", "宋庆龄祖居1", "卧龙山1", "金鞭溪大峡谷2", "宋庆龄祖居2", "卧龙山2", "金鞭溪大峡谷3", "宋庆龄祖居3", "卧龙山3", "金鞭溪大峡谷4", "宋庆龄祖居4", "卧龙山4", "金鞭溪大峡谷5", "宋庆龄祖居5", "卧龙山5", "金鞭溪大峡谷2", "宋庆龄祖居2"];
 
+// var reco_list_tmp = reco_list_test.slice(reco_cur_num, reco_cur_num + 4);
+
+var curr_list_test = spot_list_test.slice(0, 6);
+
+/*
 var curr_list_test = [
                         {
                             "spotId": "oi10000046",
@@ -339,9 +367,4 @@ var curr_list_test = [
                             "commentsNum": "74"
                         }
                     ]
-
-// var reco_list = [{"name": "八达岭长城", "fpath": "image/八达岭长城.jpg"},
-//                 {"name": "故宫", "fpath": "image/故宫.jpg"},
-//                 {"name": "颐和园", "fpath": "image/颐和园.jpg"},
-//                 {"name": "毛感千龙洞", "fpath": "https://img1.qunarzz.com/travel/poi/1712/24/254fe58f18d31537.jpg_480x360x95_bc71b675.jpg"}];
-//                 // {"name": "南锣鼓巷", "fpath": "image/南锣鼓巷.jpg"}];
+*/

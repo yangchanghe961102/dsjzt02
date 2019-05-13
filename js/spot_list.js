@@ -19,7 +19,7 @@ function init_spot_list() {
         .attr("transform", "translate(0," + height * 0.1 + ")");
 
     var spot_item = spot_items.selectAll(".spot_item")
-        .data(curr_list_test)
+        .data(curr_list)
         .enter()
         .append("g")
         .attr("class", "spot_item")
@@ -70,6 +70,9 @@ function init_spot_list() {
         .attr("id", "jump")
         .attr("transform", "translate(" + width * 0.4 + ",0)");
 
-//     var p_page = jump_g.append("text")
-//         .text("上一页")
+    // var p_page = jump_g.append("text")
+    //     .text("上一页")
+    //     .attr("font-size", height * 0.06)
+    //     .attr("x", width * 0)
+    //     .attr("y", height * 0.09);
 }

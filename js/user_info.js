@@ -26,7 +26,7 @@ function init_user_info() {
     }, 1000)
 
     info_text.append("text")
-        .text("欢迎，" + user_info_test.userName)
+        .text("欢迎，" + user_info.userName)
         .attr("x", 0)
         .attr("y", text_height * 0.28)
         .attr("font-size", text_height * 0.07);
@@ -39,14 +39,14 @@ function init_user_info() {
     //     .attr("font-size", text_height * 0.07);
 
     info_text.append("text")
-        .text("您是第  " + user_info_test.userId + "  位注册的用户")
+        .text("您是第  " + user_info.userId + "  位注册的用户")
         .attr("id", "city_num")
         .attr("x", 0)
         .attr("y", text_height * 0.46)
         .attr("font-size", text_height * 0.07);
 
     info_text.append("text")
-        .text("当前喜爱景点： " + user_info_test.spotName)
+        .text("当前喜爱景点： " + user_info.spotName)
         .attr("id", "city_text")
         .attr("x", 0)
         .attr("y", text_height * 0.64)
@@ -95,7 +95,7 @@ function init_user_info() {
     head_height = height * 0.45;
     head_size = Math.min(head_width, head_height);
     var head_image = svg.append("g").append("image")
-        .attr("xlink:href", "image/image_" + user_info_test.touxiangId + ".jpg")
+        .attr("xlink:href", "image/image_" + user_info.touxiangId + ".jpg")
         .attr("id", "head_image")
         .attr("width", head_size)
         .attr("height", head_size)

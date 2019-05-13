@@ -27,6 +27,7 @@
     <script src = "js/user_info.js"></script>
     <script src = "js/reco_list.js"></script>
     <script src = "js/spot_list.js"></script>
+    <script src = "js/process_reco_list.js"></script>
 
     <script>
         $(function() {
@@ -63,7 +64,10 @@
                                 var status_getreco = xhr_getreco.status;
                                 if (status_getreco == 200) {
                                     console.log(xhr_getreco.response);
-                                    reco_list = xhr_getreco.response;
+                                    reco_list_origin = xhr_getreco.response;
+
+                                    process_reco_list();
+                                    curr_list = spot_list.slice(0, 6);
 
                                     init_user_info();
                                     init_reco_list();

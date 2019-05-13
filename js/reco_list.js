@@ -58,7 +58,7 @@ function init_reco_list() {
         // console.log("reco_cur_num: " + reco_cur_num);
         reco_cur_num = reco_cur_num + 4;
         reco_cur_num = reco_cur_num % 20;
-        reco_list_tmp = reco_list_test.slice(reco_cur_num, reco_cur_num + 4);
+        reco_list_tmp = reco_list.slice(reco_cur_num, reco_cur_num + 4);
         reload_reco_item();
     })
 
@@ -81,13 +81,13 @@ function init_reco_list() {
             return d;
         })
         .attr("fpath", function(d) {
-            for (item in spot_list_test) {
-                if (spot_list_test[item].spotName === d) {
-                    if (spot_list_test[item].picture === null)
+            for (item in spot_list) {
+                if (spot_list[item].spotName === d) {
+                    if (spot_list[item].picture === null)
                     {
-                        spot_list_test[item].picture = "image/picture_null.png"
+                        spot_list[item].picture = "image/picture_null.png"
                     }
-                    return spot_list_test[item].picture;
+                    return spot_list[item].picture;
                 }
             }
             return null;
@@ -153,13 +153,13 @@ function reload_reco_item() {
             return d;
         })
         .attr("fpath", function(d) {
-            for (item in spot_list_test) {
-                if (spot_list_test[item].spotName === d) {
-                    if (spot_list_test[item].picture === null)
+            for (item in spot_list) {
+                if (spot_list[item].spotName === d) {
+                    if (spot_list[item].picture === null)
                     {
-                        spot_list_test[item].picture = "image/picture_null.png"
+                        spot_list[item].picture = "image/picture_null.png"
                     }
-                    return spot_list_test[item].picture;
+                    return spot_list[item].picture;
                 }
             }
             return null;
