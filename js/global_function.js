@@ -17,6 +17,7 @@ var user_info_test = {
     "password": "123456"
 }
 
+var cur_page = 1;
 var spot_list_test = [
                         {
                             "spotId": "oi10000046",
