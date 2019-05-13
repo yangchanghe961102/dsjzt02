@@ -31,16 +31,38 @@
     <script>
         $(function() {
             getName();
+
+            var url = 'http://localhost:8080/recommend/myinfo?userid=' + USERNAME;
+            console.log(url);
+
+            init_user_info();
+            init_reco_list();
+            init_spot_list();
+
+            /*var xhr = new XMLHttpRequest();
+            xhr.open('get', url, true);
+            xhr.responseType = 'json';
+            xhr.onload = function() {
+                var status = xhr.status;
+                if(status == 200) {
+                    console(xhr.response);
+                    user_info = xhr.response;
+
+                    init_user_info();
+                    init_reco_list();
+                    init_spot_list();
+                } 
+                else {
+                }
+            };
+            xhr.send();*/
         })
 
         function getName() {
             var name = $.query.get("name")
             USERNAME = name;
-            
-            init_user_info();
-            init_reco_list();
-            init_spot_list();
         }
 
     </script>
 </body>
+

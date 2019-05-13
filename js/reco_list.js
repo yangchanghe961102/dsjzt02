@@ -54,6 +54,14 @@ function init_reco_list() {
             .attr("text-decoration", "none");
     })
 
+    guess_refresh.on("click", function(d) {
+        console.log("reco_cur_num: " + reco_cur_num);
+        reco_cur_num = reco_cur_num + 4;
+        reco_cur_num = reco_cur_num % 20;
+        reco_list_tmp = reco_list_test.slice(reco_cur_num, reco_cur_num + 4);
+        console.log(reco_list_tmp);
+    })
+
     reco_g = svg.append("g")
         .attr("class", "reco_g")
         .attr("transform", "translate(" + width * 0.03 + "," + height * 0.1 + ")");
@@ -62,12 +70,15 @@ function init_reco_list() {
     reco_item_h = height * 0.4;
 
     var reco_items = reco_g.selectAll(".reco_item")
-        .data(reco_list)
+        .data(reco_list_tmp)
         .enter()
         .append("g")
         .attr("class", "reco_item")
+        .attr("id", function(d, i) {
+            return "reco_item_" + i;
+        })
         .attr("name", function(d) {
-            return d.name;
+            return d;
         })
         .attr("fpath", function(d) {
             return d.fpath;
@@ -101,8 +112,10 @@ function init_reco_list() {
         .attr("y", (reco_item_h * 0.9 - image_h) / 2);
 
     reco_items.append("text")
-        .text(function(d) {
-            return d.name;
+        .text(function(d, i) {
+            console.log(d);
+            // return reco_list_test[reco_cur_num + i];
+            return d3.select("#reco_item_" + i).attr("name");
         })
         .attr("class", "reco_item_text")
         .attr("id", function(d, i) {
@@ -115,7 +128,4 @@ function init_reco_list() {
             return (reco_item_w - image_w) / 2 + (image_w - document.getElementById("reco_item_text_" + i).getBBox().width) / 2;
         })
         .attr("y", reco_item_h * 0.95);
-        
-
-
 }

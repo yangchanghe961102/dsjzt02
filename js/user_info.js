@@ -71,7 +71,7 @@ function init_user_info() {
     head_height = height * 0.45;
     head_size = Math.min(head_width, head_height);
     var head_image = svg.append("g").append("image")
-        .attr("xlink:href", USERHEAD)
+        .attr("xlink:href", "image/image_" + user_info_test.touxiangId + ".jpg")
         .attr("id", "head_image")
         .attr("width", head_size * 0.9)
         .attr("height", head_size * 0.9)

@@ -27,26 +27,48 @@ function init_spot_list() {
             return d.spotName;
         })
         .attr("transform", function(d, i) {
-            y = height * 0.9 / 5 * i;
+            y = height * 0.9 / item_num * i;
             return "translate(" + width * 0.1 + "," + y + ")";
         })
 
     spot_item.append("image")
         .attr("xlink:href", function(d) {
+            if (d.picture === null) {
+                d.picture = "image/picture_null.png";
+            }
             return d.picture;
         })
-        .attr("width", width * 0.3)
-        .attr("height", height * 0.8 / 5)
+        .attr("width", width * 0.2)
+        .attr("height", height * 0.8 / item_num)
         .attr("x", width * 0.05)
-        .attr("y", height * 0.05 / 5);
+        .attr("y", height * 0.05 / item_num);
 
     spot_item.append("text")
         .text(function(d) {
             return d.spotName;
         })
-        .attr("font-size", height * 0.8 / 5 / 5)
-        .attr("x", width * 0.4)
-        .attr("y", height * 0.05 / 5 + height * 0.8 / 5 / 5);
+        .attr("font-size", height * 0.16 / item_num)
+        .attr("x", width * 0.3)
+        .attr("y", height * 0.42 / item_num);
 
+    spot_item.append("text")
+        .text(function(d) {
+            if (d.spotGrade === null) {
+                d.spotGrade = "暂无评分";
+            }
+            return "评分：" + d.spotGrade;
+        })
+        .attr("font-size", height * 0.12 / item_num)
+        .attr("x", width * 0.7)
+        .attr("y", height * 0.46 / item_num);
 
+    var search_g = spot_filter.append("g")
+        .attr("id", "search")
+        .attr("transform", "translate(" + width * 0.2 + ",0)");
+
+    var jump_g = spot_filter.append("g")
+        .attr("id", "jump")
+        .attr("transform", "translate(" + width * 0.4 + ",0)");
+
+    
 }
