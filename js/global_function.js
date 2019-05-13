@@ -53,7 +53,7 @@ var spot_list_test = [
                         },
                         {
                             "spotId": "oi10000046",
-                            "spotName": "金鞭溪大峡谷",
+                            "spotName": "金鞭溪大峡谷1",
                             "spotCity": "武陵源",
                             "spotRank": "100",
                             "picture": "https://img1.qunarzz.com/travel/d3/1805/bd/716a9c981535a2b5.jpg_480x360x95_589dbb20.jpg",
@@ -64,7 +64,7 @@ var spot_list_test = [
                         },
                         {
                             "spotId": "oi10000063",
-                            "spotName": "宋庆龄祖居",
+                            "spotName": "宋庆龄祖居1",
                             "spotCity": "文昌",
                             "spotRank": "13",
                             "picture": " https://img1.qunarzz.com/travel/poi/1712/92/2e504df9bac9e537.jpg_480x360x95_8bab5b67.jpg",
@@ -75,7 +75,7 @@ var spot_list_test = [
                         },
                         {
                             "spotId": "oi10000067",
-                            "spotName": "卧龙山",
+                            "spotName": "卧龙山1",
                             "spotCity": "屯昌",
                             "spotRank": "8",
                             "picture": null,
@@ -86,7 +86,7 @@ var spot_list_test = [
                         },
                         {
                             "spotId": "oi10000046",
-                            "spotName": "金鞭溪大峡谷",
+                            "spotName": "金鞭溪大峡谷2",
                             "spotCity": "武陵源",
                             "spotRank": "100",
                             "picture": "https://img1.qunarzz.com/travel/d3/1805/bd/716a9c981535a2b5.jpg_480x360x95_589dbb20.jpg",
@@ -97,7 +97,7 @@ var spot_list_test = [
                         },
                         {
                             "spotId": "oi10000063",
-                            "spotName": "宋庆龄祖居",
+                            "spotName": "宋庆龄祖居2",
                             "spotCity": "文昌",
                             "spotRank": "13",
                             "picture": " https://img1.qunarzz.com/travel/poi/1712/92/2e504df9bac9e537.jpg_480x360x95_8bab5b67.jpg",
@@ -108,7 +108,7 @@ var spot_list_test = [
                         },
                         {
                             "spotId": "oi10000067",
-                            "spotName": "卧龙山",
+                            "spotName": "卧龙山2",
                             "spotCity": "屯昌",
                             "spotRank": "8",
                             "picture": null,
@@ -119,7 +119,7 @@ var spot_list_test = [
                         },
                         {
                             "spotId": "oi10000046",
-                            "spotName": "金鞭溪大峡谷",
+                            "spotName": "金鞭溪大峡谷3",
                             "spotCity": "武陵源",
                             "spotRank": "100",
                             "picture": "https://img1.qunarzz.com/travel/d3/1805/bd/716a9c981535a2b5.jpg_480x360x95_589dbb20.jpg",
@@ -130,7 +130,7 @@ var spot_list_test = [
                         },
                         {
                             "spotId": "oi10000063",
-                            "spotName": "宋庆龄祖居",
+                            "spotName": "宋庆龄祖居3",
                             "spotCity": "文昌",
                             "spotRank": "13",
                             "picture": " https://img1.qunarzz.com/travel/poi/1712/92/2e504df9bac9e537.jpg_480x360x95_8bab5b67.jpg",
@@ -141,7 +141,7 @@ var spot_list_test = [
                         },
                         {
                             "spotId": "oi10000067",
-                            "spotName": "卧龙山",
+                            "spotName": "卧龙山3",
                             "spotCity": "屯昌",
                             "spotRank": "8",
                             "picture": null,
@@ -152,7 +152,7 @@ var spot_list_test = [
                         },
                         {
                             "spotId": "oi10000046",
-                            "spotName": "金鞭溪大峡谷",
+                            "spotName": "金鞭溪大峡谷4",
                             "spotCity": "武陵源",
                             "spotRank": "100",
                             "picture": "https://img1.qunarzz.com/travel/d3/1805/bd/716a9c981535a2b5.jpg_480x360x95_589dbb20.jpg",
@@ -163,7 +163,7 @@ var spot_list_test = [
                         },
                         {
                             "spotId": "oi10000063",
-                            "spotName": "宋庆龄祖居",
+                            "spotName": "宋庆龄祖居4",
                             "spotCity": "文昌",
                             "spotRank": "13",
                             "picture": " https://img1.qunarzz.com/travel/poi/1712/92/2e504df9bac9e537.jpg_480x360x95_8bab5b67.jpg",
@@ -174,7 +174,7 @@ var spot_list_test = [
                         },
                         {
                             "spotId": "oi10000067",
-                            "spotName": "卧龙山",
+                            "spotName": "卧龙山4",
                             "spotCity": "屯昌",
                             "spotRank": "8",
                             "picture": null,
@@ -185,7 +185,7 @@ var spot_list_test = [
                         },
                         {
                             "spotId": "oi10000046",
-                            "spotName": "金鞭溪大峡谷",
+                            "spotName": "金鞭溪大峡谷5",
                             "spotCity": "武陵源",
                             "spotRank": "100",
                             "picture": "https://img1.qunarzz.com/travel/d3/1805/bd/716a9c981535a2b5.jpg_480x360x95_589dbb20.jpg",
@@ -196,7 +196,7 @@ var spot_list_test = [
                         },
                         {
                             "spotId": "oi10000063",
-                            "spotName": "宋庆龄祖居",
+                            "spotName": "宋庆龄祖居5",
                             "spotCity": "文昌",
                             "spotRank": "13",
                             "picture": " https://img1.qunarzz.com/travel/poi/1712/92/2e504df9bac9e537.jpg_480x360x95_8bab5b67.jpg",
@@ -207,7 +207,7 @@ var spot_list_test = [
                         },
                         {
                             "spotId": "oi10000067",
-                            "spotName": "卧龙山",
+                            "spotName": "卧龙山5",
                             "spotCity": "屯昌",
                             "spotRank": "8",
                             "picture": null,
@@ -220,7 +220,7 @@ var spot_list_test = [
 
 var reco_cur_num = 1;
 var reco_list_test = [
-    "武夷山", "金鞭溪大峡谷", "宋庆龄祖居", "卧龙山", "金鞭溪大峡谷", "宋庆龄祖居", "卧龙山", "金鞭溪大峡谷", "宋庆龄祖居", "卧龙山", "金鞭溪大峡谷", "宋庆龄祖居", "卧龙山", "金鞭溪大峡谷", "宋庆龄祖居", "卧龙山", "金鞭溪大峡谷", "宋庆龄祖居", "卧龙山", "金鞭溪大峡谷", "宋庆龄祖居"
+    "武夷山", "金鞭溪大峡谷", "宋庆龄祖居", "卧龙山", "金鞭溪大峡谷1", "宋庆龄祖居1", "卧龙山1", "金鞭溪大峡谷2", "宋庆龄祖居2", "卧龙山2", "金鞭溪大峡谷3", "宋庆龄祖居3", "卧龙山3", "金鞭溪大峡谷4", "宋庆龄祖居4", "卧龙山4", "金鞭溪大峡谷5", "宋庆龄祖居5", "卧龙山5", "金鞭溪大峡谷2", "宋庆龄祖居2"
 ]
 
 var reco_list_tmp = reco_list_test.slice(reco_cur_num, reco_cur_num + 4);

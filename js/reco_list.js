@@ -55,11 +55,11 @@ function init_reco_list() {
     })
 
     guess_refresh.on("click", function(d) {
-        console.log("reco_cur_num: " + reco_cur_num);
+        // console.log("reco_cur_num: " + reco_cur_num);
         reco_cur_num = reco_cur_num + 4;
         reco_cur_num = reco_cur_num % 20;
         reco_list_tmp = reco_list_test.slice(reco_cur_num, reco_cur_num + 4);
-        console.log(reco_list_tmp);
+        reload_reco_item();
     })
 
     reco_g = svg.append("g")
@@ -81,13 +81,22 @@ function init_reco_list() {
             return d;
         })
         .attr("fpath", function(d) {
-            return d.fpath;
+            for (item in spot_list_test) {
+                if (spot_list_test[item].spotName === d) {
+                    if (spot_list_test[item].picture === null)
+                    {
+                        spot_list_test[item].picture = "image/picture_null.png"
+                    }
+                    return spot_list_test[item].picture;
+                }
+            }
+            return null;
         })
         .attr("transform", function(d, i) {
             x_index = i % 2;
             y_index = parseInt(i / 2);
-            console.log(x_index);
-            console.log(y_index);
+            // console.log(x_index);
+            // console.log(y_index);
             x = x_index * reco_item_w;
             y = y_index * reco_item_h;
             return "translate(" + x + "," + y + ")";
@@ -103,8 +112,8 @@ function init_reco_list() {
     }
 
     reco_items.append("image")
-        .attr("xlink:href", function(d) {
-            return d.fpath;
+        .attr("xlink:href", function(d, i) {
+            return d3.select("#reco_item_" + i).attr("fpath");
         })
         .attr("width",  image_w)
         .attr("height", image_h)
@@ -123,8 +132,80 @@ function init_reco_list() {
         })
         .attr("font-size", reco_item_h * 0.1)
         .attr("x", function(d, i) {
-            console.log(document.getElementById("reco_item_text_" + i).getBBox().width);
-            console.log(image_w)
+            // console.log(document.getElementById("reco_item_text_" + i).getBBox().width);
+            // console.log(image_w)
+            return (reco_item_w - image_w) / 2 + (image_w - document.getElementById("reco_item_text_" + i).getBBox().width) / 2;
+        })
+        .attr("y", reco_item_h * 0.95);
+}
+
+function reload_reco_item() {
+    reco_g.selectAll(".reco_item").remove();
+    var reco_items = reco_g.selectAll(".reco_item")
+        .data(reco_list_tmp)
+        .enter()
+        .append("g")
+        .attr("class", "reco_item")
+        .attr("id", function(d, i) {
+            return "reco_item_" + i;
+        })
+        .attr("name", function(d) {
+            return d;
+        })
+        .attr("fpath", function(d) {
+            for (item in spot_list_test) {
+                if (spot_list_test[item].spotName === d) {
+                    if (spot_list_test[item].picture === null)
+                    {
+                        spot_list_test[item].picture = "image/picture_null.png"
+                    }
+                    return spot_list_test[item].picture;
+                }
+            }
+            return null;
+        })
+        .attr("transform", function(d, i) {
+            x_index = i % 2;
+            y_index = parseInt(i / 2);
+            // console.log(x_index);
+            // console.log(y_index);
+            x = x_index * reco_item_w;
+            y = y_index * reco_item_h;
+            return "translate(" + x + "," + y + ")";
+        })
+
+    image_w = reco_item_w * 0.9;
+    image_h = reco_item_h * 0.8;
+    if (image_w / image_h > 3 / 2) {
+        image_w = image_h * 3 / 2;
+    }
+    else {
+        image_h = image_w * 2 / 3;
+    }
+
+    reco_items.append("image")
+        .attr("xlink:href", function(d, i) {
+            return d3.select("#reco_item_" + i).attr("fpath");
+        })
+        .attr("width",  image_w)
+        .attr("height", image_h)
+        .attr("x", (reco_item_w - image_w) / 2)
+        .attr("y", (reco_item_h * 0.9 - image_h) / 2);
+
+    reco_items.append("text")
+        .text(function(d, i) {
+            console.log(d);
+            // return reco_list_test[reco_cur_num + i];
+            return d3.select("#reco_item_" + i).attr("name");
+        })
+        .attr("class", "reco_item_text")
+        .attr("id", function(d, i) {
+            return "reco_item_text_" + i;
+        })
+        .attr("font-size", reco_item_h * 0.1)
+        .attr("x", function(d, i) {
+            // console.log(document.getElementById("reco_item_text_" + i).getBBox().width);
+            // console.log(image_w)
             return (reco_item_w - image_w) / 2 + (image_w - document.getElementById("reco_item_text_" + i).getBBox().width) / 2;
         })
         .attr("y", reco_item_h * 0.95);
