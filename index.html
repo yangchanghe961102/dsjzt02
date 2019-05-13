@@ -20,6 +20,8 @@
     </div>
 
     <script src = "js/d3v4.js"></script>
+    <script src = "js/jquery-1.4.4.min.js"></script>
+    <script src="js/jquery.params.js"></script>
 
     <script src = "js/global_function.js"></script>
     <script src = "js/user_info.js"></script>
@@ -27,8 +29,18 @@
     <script src = "js/spot_list.js"></script>
 
     <script>
-        init_user_info();
-        init_reco_list();
-        init_spot_list();
+        $(function() {
+            getName();
+        })
+
+        function getName() {
+            var name = $.query.get("name")
+            USERNAME = name;
+            
+            init_user_info();
+            init_reco_list();
+            init_spot_list();
+        }
+
     </script>
 </body>
