@@ -36,7 +36,7 @@ function init_reco_list() {
         .attr("height", font_size);
 
     guess_refresh.append("text")
-        .text("刷新")
+        .text("下一组")
         .attr("x", font_size / 0.7)
         .attr("y", font_size)
         .attr("font-size", font_size)

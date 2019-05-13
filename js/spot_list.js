@@ -81,5 +81,7 @@ function init_spot_list() {
         .attr("id", "jump")
         .attr("transform", "translate(" + width * 0.4 + ",0)");
 
-    
+
+//     var p_page = jump_g.append("text")
+//         .text("上一页")
 }

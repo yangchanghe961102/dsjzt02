@@ -48,30 +48,51 @@
         $(function() {
             getName();
 
-            var url = 'http://localhost:8080/recommend/myinfo?userid=' + USERNAME;
-            console.log(url);
+            var url_getlist = 'http://localhost:8080/recommend/spotlist';
+            console.log(url_getlist);
+            var xhr_getlist = new XMLHttpRequest();
+            xhr_getlist.open('get', url_getlist, true);
+            xhr_getlist.responseType = 'json';
+            xhr_getlist.onload = function() {
+                var status_getlist = xhr_getlist.status;
+                if (status_getlist == 200) {
+                    console.log("getlist success");
+                    spot_list = xhr_getlist.response;
 
-            init_user_info();
-            init_reco_list();
-            init_spot_list();
+                    var url = 'http://localhost:8080/recommend/myinfo?userName=' + USERNAME;
+                    console.log(url);
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('get', url, true);
+                    xhr.responseType = 'json';
+                    xhr.onload = function() {
+                        var status = xhr.status;
+                        if(status == 200) {
+                            console.log(xhr.response);
+                            user_info = xhr.response;
 
-            /*var xhr = new XMLHttpRequest();
-            xhr.open('get', url, true);
-            xhr.responseType = 'json';
-            xhr.onload = function() {
-                var status = xhr.status;
-                if(status == 200) {
-                    console(xhr.response);
-                    user_info = xhr.response;
+                            url_getreco = 'http://localhost:8080/recommend/recommend_result_list?spotName=' + user_info.spotName;
+                            console.log(url_getreco);
+                            var xhr_getreco = new XMLHttpRequest();
+                            xhr_getreco.open('get', url_getreco, true);
+                            xhr_getreco.responseType = 'json';
+                            xhr_getreco.onload = function() {
+                                var status_getreco = xhr_getreco.status;
+                                if (status_getreco == 200) {
+                                    console.log(xhr_getreco.response);
+                                    reco_list = xhr_getreco.response;
 
-                    init_user_info();
-                    init_reco_list();
-                    init_spot_list();
-                } 
-                else {
+                                    init_user_info();
+                                    init_reco_list();
+                                    init_spot_list();
+                                }
+                            }
+                            xhr_getreco.send();
+                        }
+                    };
+                    xhr.send();
                 }
-            };
-            xhr.send();*/
+            }
+            xhr_getlist.send();
         })
 
         function getName() {

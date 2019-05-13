@@ -8,6 +8,7 @@ var item_num = 6;
 var user_info = {};
 var spot_list = {};
 var curr_list = {};
+var reco_list = {};
 
 var user_info_test = {
     "userId": 4,
@@ -339,8 +340,8 @@ var curr_list_test = [
                         }
                     ]
 
-var reco_list = [{"name": "八达岭长城", "fpath": "image/八达岭长城.jpg"},
-                {"name": "故宫", "fpath": "image/故宫.jpg"},
-                {"name": "颐和园", "fpath": "image/颐和园.jpg"},
-                {"name": "毛感千龙洞", "fpath": "https://img1.qunarzz.com/travel/poi/1712/24/254fe58f18d31537.jpg_480x360x95_bc71b675.jpg"}];
-                // {"name": "南锣鼓巷", "fpath": "image/南锣鼓巷.jpg"}];
+// var reco_list = [{"name": "八达岭长城", "fpath": "image/八达岭长城.jpg"},
+//                 {"name": "故宫", "fpath": "image/故宫.jpg"},
+//                 {"name": "颐和园", "fpath": "image/颐和园.jpg"},
+//                 {"name": "毛感千龙洞", "fpath": "https://img1.qunarzz.com/travel/poi/1712/24/254fe58f18d31537.jpg_480x360x95_bc71b675.jpg"}];
+//                 // {"name": "南锣鼓巷", "fpath": "image/南锣鼓巷.jpg"}];
